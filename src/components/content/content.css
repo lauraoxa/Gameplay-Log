@@ -1,0 +1,20 @@
+.content {
+  overflow-y: scroll;
+  background-color:rgba(36, 32, 32, 0.6);
+  height: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #242020 #FFF;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #242020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(184,241,150,0.6);
+}

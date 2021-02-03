@@ -1,0 +1,21 @@
+.menu {
+  background-color: #242020;
+  color: #ffffff;
+  max-height: 4rem;
+  min-height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu a:link {
+  color: #FFF;
+}
+
+.menu a:hover {
+  color: #B8F196;
+}
+
+.icons {
+  font-size: xx-large;
+}
