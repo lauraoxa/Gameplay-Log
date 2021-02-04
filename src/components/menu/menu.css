@@ -12,8 +12,16 @@
   color: #FFF;
 }
 
+.menu a:visited {
+  color: #FFF;
+}
+
 .menu a:hover {
-  color: #B8F196;
+  color: 	rgba(184, 241, 150, 0.6);
+}
+
+.menu a:active {
+  color: #FFF;
 }
 
 .icons {

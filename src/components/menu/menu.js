@@ -7,9 +7,9 @@ import FolderSpecialRoundedIcon from '@material-ui/icons/FolderSpecialRounded';
 function Menu() {
   return (
     <div className="menu">
-      <div className="icons"><SportsEsportsRoundedIcon fontSize="large" /></div>
-      <div className="icons"><ShowChartRoundedIcon fontSize="large" /></div>
-      <div className="icons"><FolderSpecialRoundedIcon fontSize="large" /></div>
+      <div className="icons"><Link to="/"><SportsEsportsRoundedIcon fontSize="large" /></Link></div>
+      <div className="icons"><Link to="/stats"><ShowChartRoundedIcon fontSize="large" /></Link></div>
+      <div className="icons"><Link to="/catalogue"><FolderSpecialRoundedIcon fontSize="large" /></Link></div>
     </div>
   );
 }
