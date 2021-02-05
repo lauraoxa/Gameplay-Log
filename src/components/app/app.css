@@ -1,12 +1,11 @@
 .app {
-  box-sizing: content-box;
   max-width: 38rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
   text-align: center;
-  color: #CCC;
-  
+  margin: 0 auto;
+  background-color: #242020;
 }
 
 .app > * {

@@ -1,9 +1,17 @@
 import './gamelog.css';
+import CardLog from '../../elements/card-log';
 
 function Gamelog() {
   return(
     <div>
-      <h1>Game Log</h1>
+      <CardLog />
+      <CardLog />
+      <CardLog />
+      <CardLog />
+      <CardLog />
+      <CardLog />
+      <CardLog />
+      <CardLog />
     </div>
   );
 }
