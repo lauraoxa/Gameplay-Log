@@ -4,8 +4,8 @@
 .catalogue {
   display: flex;
   flex-direction: column;
-  justify-content:stretch;
-  margin: 0.5rem 0.5rem;
+  justify-content: space-evenly;
+  margin: 0.5rem;
 }
 
 .catalogue__left {

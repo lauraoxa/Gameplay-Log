@@ -1,17 +1,63 @@
 import './buttons.css';
 
-// button: GO!
+const classNames = classnames => classnames.join(" ");
 
-// button: CLEAR
+// button--primary: SAVE, FILTER
 
-// button: close
+const Button = ({className="", primary, ...props}) => {
+  return (
+     <button
+      type="button"
+      className={classNames([
+          "button",
+          className,
+          primary ? "button--primary" : "",
+      ])}
+      {...props}
+      />
+  );
+}
 
-// button: SAVE
+// button--secondary: DELETE, CLEAR
+const ButtonSec = ({className="", secondary, ...props}) => {
+  return (
+     <button
+      type="button"
+      className={classNames([
+          "button",
+          className,
+          secondary ? "button--secondary" : "",
+      ])}
+      {...props}
+      /> 
+  );
+}
 
-// button: DELETE
+//button--disabled
+const ButtonDisabled = ({className="", disabled, ...props}) => {
+  return (
+     <button
+      type="button"
+      className={classNames([
+          "button",
+          className,
+          disabled ? "button--disabled" : "",
+      ])}
+      {...props}
+      /> 
+  );
+}
+// button--square: GO!
+const ButtonSquare = ({ className = "", ...props}) => {
+  return (
+      <Button
+          className={classNames([
+              "button--square",
+              className
+          ])}
+          {...props}
+      />
+  );
+}
 
-// button: FILTER
-
-// hover: EDIT
-
-// export {xxx as default, xxx, xxx, xxx};
+export {Button as default, Button, ButtonSec, ButtonDisabled, ButtonSquare};

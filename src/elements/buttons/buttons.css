@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500&display=swap');
+
+/* Save, Filter */
+.button {
+  background: rgba(36,32,32,0.8);
+  box-shadow: 2px 2px 1px #000000;
+  border-radius: 5px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: #f2f2f2;
+  font-weight:500;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px #000000;
+  text-transform: uppercase;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 4rem;
+  width: 7rem;
+  height: 3rem;
+  }
+
+  .button:hover {
+    background: rgba(36,32,32,0.2);
+    font-size: 2.1rem;
+  }
+
+  /* Save, Filter */
+.button--secondary {
+  background: rgba(242, 242, 242, 0.8);
+  box-shadow: 2px 2px 1px #000000;
+  border-radius: 5px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: rgba(36,32,32,0.8);
+  font-weight:500;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 3rem;
+  }
+
+  .button--secondary:hover {
+    background: rgba(242, 242, 242, 0.6);
+    font-size: 2.1rem;
+  }
+
+    /* Disabled */
+.button--disabled, .button--disabled:hover {
+  opacity: 0.5;
+  background: rgba(242, 242, 242, 0.8);
+  box-shadow: 2px 2px 1px #000000;
+  border-radius: 5px;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: rgba(36,32,32,0.8);
+  font-weight:500;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 3rem;
+  }
+
+  .button--square, .button--square:hover {
+    background: rgba(242, 242, 242, 0.8);
+    box-shadow: 2px 2px 1px #000000;
+    border-radius: 5px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: rgba(36,32,32,0.8);
+    font-weight:500;
+    font-size: 6rem;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    }
+  
+  .button--square:hover {
+    background: rgba(242, 242, 242, 1);
+  }

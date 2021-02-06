@@ -1,15 +1,10 @@
 import './catalogue.css';
-import {BrowserRouter as Router, Link, useRouteMatch} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import iconarticle from '../../images/icon_article-white-48dp.svg';
 import iconadd from '../../images/icon_add_box-white-48dp.svg';
 import iconfilter from '../../images/icon_filter_alt-white-48dp.svg'; 
-import AllConsoles from '../allconsoles';
-import AllGames from '../allgames';
 
 function Catalogue() {
-
-  let { path, url } = useRouteMatch();
-
   return(
     <div className="catalogue">
       <Router>
@@ -35,7 +30,7 @@ function Catalogue() {
               <img src={iconarticle} alt="" />
             </div>
             <div>
-              <Link to={`${url}/allgames`}><p>All games</p></Link>
+              <Link to="/allgames"><p>All games</p></Link>
             </div>
           </div>
           <div className="button-addnew">
@@ -49,7 +44,9 @@ function Catalogue() {
           <div className="catalogue__icon">
             <img src={iconfilter} alt="" />
           </div>
-          <div><p>Filter by console</p></div>
+          <div>
+            <Link to="/filter"><p>Filter by console</p></Link>
+          </div>
         </div>
       </Router>
     </div>
