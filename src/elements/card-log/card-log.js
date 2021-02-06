@@ -21,7 +21,7 @@ function CardLog() {
         </div>
         <div className="card-log--row">
           <div className="card-log__icon"><img src={icontime} alt="" /></div>
-          <div className="card-log__playtime">2 H 33 MIN testi</div>
+          <div className="card-log__playtime">2 H 33 MIN</div>
         </div>
       </div>
       <div className="card-log--edit">

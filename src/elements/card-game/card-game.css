@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;600;700&display=swap');
 
-.card-log {
+.card-game {
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -10,7 +10,7 @@
   box-shadow: 1px 2px 2px #000000;
 }
 
-.card-log--left {
+.card-game--left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +18,7 @@
 }
 
 /* font-weight 600*/
-.card-log__title {
+.card-game__title {
   flex-shrink: 1;
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
@@ -28,7 +28,7 @@
 }
 
 /* font-weight 200*/
-.card-log__format {
+.card-game__format {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
   font-size: 1.25rem;
@@ -38,37 +38,33 @@
 
 /* ----- STATS ----- */
 
-.card-log--statistics {
-  display: grid;
+.card-game--statistics {
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
   position: relative;
   right: 0.5rem;
+  bottom: 0.5rem;
   line-height: 1;
   margin: 0.3rem;
 }
 
-.card-log--row {
+.card-game--row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-left: auto;
 }
 
-.card-log__icon {
-  align-items: center;
-}
-
-.card-log__icon img {
+.card-game img {
   width: 1.25rem;
   height: auto;
-  padding: 0.3rem;
   padding-right: 1.5rem;
   vertical-align: middle;
 }
 
 /* font-weight 300*/
-.card-log__console, .card-log__date, .card-log__playtime {
+.card-game__playtime {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
@@ -78,7 +74,7 @@
 /* ----- EDITING ----- */
 
 /* font-weight 700*/
-.card-log--edit {
+.card-game--edit {
   display: flex;
   align-items: center;
   border-radius: 0 10px 10px 0;
@@ -93,20 +89,20 @@
   transition-timing-function: ease;
 }
 
-.card-log--edit p {
+.card-game--edit p {
   display: flex;
   justify-content: space-around;  
   transform: rotate(90deg);
 }
 
-.card-log--edit:hover{
+.card-game--edit:hover{
   width: max-content;
 }
 
-.card-log--edit:hover p {
+.card-game--edit:hover p {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: center;
   color: rgba(242, 242, 242, 0.8);
   text-transform: uppercase;
