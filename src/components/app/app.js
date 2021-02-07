@@ -9,6 +9,8 @@ import AllConsoles from '../../components/allconsoles';
 import AllGames from '../../components/allgames';
 import Filter from '../../components/filter';
 import Menu from '../../components/menu';
+import consoleData from '../../tempConsoleData.js';
+import gameData from '../../tempGameData.js';
 
 function App() {
   return (
@@ -22,16 +24,16 @@ function App() {
           <Route path="/stats">
             <Stats />
           </Route>
-          <Route path="/catalogue">
+          <Route exact path="/catalogue">
             <Catalogue />
           </Route>
-          <Route path="/allconsoles/">
+          <Route exact path="/catalogue/allconsoles/">
             <AllConsoles />
           </Route>
-          <Route path="/allgames">
+          <Route exact path="/catalogue/allgames">
             <AllGames />
           </Route>
-          <Route path="/filter">
+          <Route exact path="/catalogue/filter">
             <Filter />
           </Route>
         </Content>

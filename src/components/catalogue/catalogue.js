@@ -1,20 +1,19 @@
 import './catalogue.css';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import iconarticle from '../../images/icon_article-white-48dp.svg';
 import iconadd from '../../images/icon_add_box-white-48dp.svg';
 import iconfilter from '../../images/icon_filter_alt-white-48dp.svg'; 
 
 function Catalogue() {
-  return(
-    <div className="catalogue">
-      <Router>
+  return(      
+      <div className="catalogue">
         <div className="catalogue--allconsoles">
           <div className="catalogue__left">  
             <div className="catalogue__icon">
               <img src={iconarticle} alt="" />
             </div>
             <div>
-              <p><Link to="/allconsoles">All consoles</Link></p>
+            <Link to="/catalogue/allconsoles"><p>All consoles</p></Link>
             </div>
           </div>
           <div className="button-addnew">
@@ -30,7 +29,7 @@ function Catalogue() {
               <img src={iconarticle} alt="" />
             </div>
             <div>
-              <Link to="/allgames"><p>All games</p></Link>
+            <p><Link to="catalogue/allgames">All games</Link></p>
             </div>
           </div>
           <div className="button-addnew">
@@ -45,11 +44,10 @@ function Catalogue() {
             <img src={iconfilter} alt="" />
           </div>
           <div>
-            <Link to="/filter"><p>Filter by console</p></Link>
+          <Link to="/catalogue/filter"><p>Filter by console</p></Link>
           </div>
         </div>
-      </Router>
-    </div>
+      </div>
   );
 }
 
