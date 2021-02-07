@@ -5,7 +5,7 @@ const gameData = [
   format: "PS1",
   playableOn: ["PS1", "PS2"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "1543678000"
 },
 {
   id: "ps1wipeout",
@@ -13,7 +13,7 @@ const gameData = [
   format: "PS1",
   playableOn: ["PS1", "PS2"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "12546000"
 },
 {
   id: "ps2spyroherostail",
@@ -21,7 +21,7 @@ const gameData = [
   format: "PS2",
   playableOn: ["PS2"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "452000"
 },
 {
   id: "ps2crashbandicootwrathcortex",
@@ -29,7 +29,7 @@ const gameData = [
   format: "PS2",
   playableOn: ["PS2"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "123987000"
 },
 {
   id: "ps3raymanorigins",
@@ -37,7 +37,7 @@ const gameData = [
   format: "PS3",
   playableOn: ["PS3"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "35632000"
 },
 {
   id: "ps3skylandersspyroadventure",
@@ -45,7 +45,7 @@ const gameData = [
   format: "PS3",
   playableOn: ["PS3"],
   storage: "dics",
-  playedTotalTime: ""
+  playedTotalTime: "23419000"
 },
 {
   id: "ps3ratchetclank",
@@ -53,7 +53,7 @@ const gameData = [
   format: "PS3",
   playableOn: ["PS3"],
   storage: "digital",
-  playedTotalTime: ""
+  playedTotalTime: "93854000"
 },
 {
   id: "ps4crashbandicoot",
@@ -61,7 +61,7 @@ const gameData = [
   format: "PS4",
   playableOn: ["PS4"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "23456000"
 },
 {
   id: "ps4spyrothedragon",
@@ -69,7 +69,7 @@ const gameData = [
   format: "PS4",
   playableOn: ["PS4"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "178000000"
 },
 {
   id: "ps4snakepass",
@@ -77,7 +77,7 @@ const gameData = [
   format: "PS4",
   playableOn: ["PS4"],
   storage: "digital",
-  playedTotalTime: ""
+  playedTotalTime: "84600000"
 },
 {
   id: "gbcsupermariobros",
@@ -85,7 +85,7 @@ const gameData = [
   format: "GBC",
   playableOn: ["GBC", "GBA"],
   storage: "dics",
-  playedTotalTime: ""
+  playedTotalTime: "86400000"
 },
 {
   id: "gbapokemonemerald",
@@ -93,7 +93,7 @@ const gameData = [
   format: "GBA",
   playableOn: ["GBA", "DS"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "3450000"
 },
 {
   id: "gbapokemonleafgreen",
@@ -101,7 +101,7 @@ const gameData = [
   format: "GBA",
   playableOn: ["GBA", "DS"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "700000000"
 },
 {
   id: "dspokemonwhite",
@@ -109,7 +109,7 @@ const gameData = [
   format: "DS",
   playableOn: ["DS"],
   storage: "dics",
-  playedTotalTime: ""
+  playedTotalTime: "450230000"
 },
 {
   id: "dspokemonplatinum",
@@ -117,7 +117,7 @@ const gameData = [
   format: "DS",
   playableOn: ["DS"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "7560000"
 },
 {
   id: "3dspokemonultrasun",
@@ -125,7 +125,7 @@ const gameData = [
   format: "3DS",
   playableOn: ["3DS"],
   storage: "dics",
-  playedTotalTime: ""
+  playedTotalTime: "721440000"
 },
 {
   id: "3dspokemonmoon",
@@ -133,7 +133,7 @@ const gameData = [
   format: "3DS",
   playableOn: ["3DS"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "10800000"
 },
 {
   id: "3dspokemoncrystal",
@@ -141,7 +141,7 @@ const gameData = [
   format: "3DS",
   playableOn: ["3DS"],
   storage: "digital",
-  playedTotalTime: ""
+  playedTotalTime: "128500000"
 },
 {
   id: "switchpokemoneevee",
@@ -149,7 +149,7 @@ const gameData = [
   format: "Switch",
   playableOn: ["Switch"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "56160000"
 },
 {
   id: "switchpokemonshield",
@@ -157,7 +157,7 @@ const gameData = [
   format: "Switch",
   playableOn: ["Switch"],
   storage: "disc",
-  playedTotalTime: ""
+  playedTotalTime: "9000000"
 }
 ];
 

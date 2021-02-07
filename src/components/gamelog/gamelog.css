@@ -1,0 +1,37 @@
+.gamelog {
+display: flex;
+flex-direction: column;
+}
+
+.gamelog--entries {
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 63vh;
+}
+
+.gamelog--menu {
+display: flex;
+flex-direction: row;
+position: sticky;
+align-items:baseline;
+justify-content: space-evenly;
+}
+
+.gamelog--menu__icon {
+width: 120%;
+height: auto;
+align-items: center;
+margin-top: 0.5rem;
+}
+
+.gamelog--menu__icon a:link {
+  opacity: 1;
+}
+
+.gamelog--menu__icon a:visited {
+  opacity: 1;
+}
+
+.gamelog--menu__icon a:hover {
+opacity: 0.5;
+}
