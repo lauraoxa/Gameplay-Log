@@ -3,10 +3,13 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from '../../components/header';
 import Content from '../../components/content';
 import Gamelog from '../../components/gamelog';
+import CardLog from '../../elements/card-log';
 import Stats from '../../components/stats';
 import Catalogue from '../../components/catalogue';
 import AllConsoles from '../../components/allconsoles';
+import CardConsole from '../../elements/card-console';
 import AllGames from '../../components/allgames';
+import CardGame from '../../elements/card-game';
 import Filter from '../../components/filter';
 import Menu from '../../components/menu';
 import consoleData from '../../tempConsoleData.js';
@@ -19,7 +22,7 @@ function App() {
         <Header />
         <Content>
           <Route exact path="/">
-            <Gamelog />
+            <Gamelog consoleData={consoleData} gameData={gameData}/>
           </Route>
           <Route path="/stats">
             <Stats />
@@ -28,10 +31,10 @@ function App() {
             <Catalogue />
           </Route>
           <Route exact path="/catalogue/allconsoles/">
-            <AllConsoles />
+            <AllConsoles consoleData={consoleData} />
           </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames />
+            <AllGames gameData={gameData}/>
           </Route>
           <Route exact path="/catalogue/filter">
             <Filter />

@@ -33,7 +33,7 @@ const gameData = [
 },
 {
   id: "ps3raymanorigins",
-  name: "Raymam Origins",
+  name: "Rayman Origins",
   format: "PS3",
   playableOn: ["PS3"],
   storage: "disc",

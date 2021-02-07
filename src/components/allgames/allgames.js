@@ -1,19 +1,13 @@
 import './allgames.css';
 import CardGame from '../../elements/card-game';
 
-function AllGames() {
-  return(
+function AllGames(props) {
+
+  const games = props.gameData.map((game) => <CardGame gameData={game} />);
+
+  return (
     <div>
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
-      <CardGame />
+      {games}
     </div>
   );
 }
