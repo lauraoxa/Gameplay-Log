@@ -6,7 +6,9 @@ import Gamelog from '../../components/gamelog';
 import Stats from '../../components/stats';
 import Catalogue from '../../components/catalogue';
 import AllConsoles from '../../components/allconsoles';
+import AddEditConsole from '../../components/addedit-console';
 import AllGames from '../../components/allgames';
+import AddEditGame from '../../components/addedit-game';
 import AllLogs from '../../components/alllogs';
 import Filter from '../../components/filter';
 import Menu from '../../components/menu';
@@ -31,12 +33,18 @@ function App() {
           <Route exact path="/catalogue">
             <Catalogue />
           </Route>
-          <Route exact path="/catalogue/allconsoles/">
+          <Route exact path="/catalogue/allconsoles">
             <AllConsoles consoleData={consoleData} />
           </Route>
+          <Route path="/edit-console">
+          <AddEditConsole />
+        </Route>
           <Route exact path="/catalogue/allgames">
             <AllGames gameData={gameData}/>
           </Route>
+          <Route path="/edit-game">
+          <AddEditGame />
+        </Route>
           <Route exact path="/catalogue/filter">
             <Filter />
           </Route>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;400&display=swap');
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color:	rgba(184, 241, 150, 0.6);
+  margin: 1rem 0.3rem;
+  padding: 1rem;
+  box-shadow: 1px 2px 2px #000000;
+  height:max-content;
+}
+
+.form--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.form--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.form--text__big {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 2.5rem;
+  color: #F2F2F2;
+  text-shadow: 1px 1px 0px #000000;
+  text-align: left;
+}
+
+.form--text__medium {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #F2F2F2;
+  text-shadow: 1px 1px 0px #000000;
+  text-align: left;
+  position: relative;
+  left: -25vw;
+}
+
+.form--text__small {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #F2F2F2;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #000000;
+  text-align: left;
+}
+
+.form input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40vw;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+.form--row__radioselect, .form select {
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align:middle;
+  width: 40vw;
+  margin-right: 1rem;
+}
+
+.form--buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
