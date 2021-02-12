@@ -1,17 +1,23 @@
 import './app.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+//----- MAIN ELEMENTS -----
 import Header from '../../components/header';
 import Content from '../../components/content';
+import Menu from '../../components/menu';
+//----- GAME LOG -----
 import Gamelog from '../../components/gamelog';
+import AllLogs from '../../components/alllogs';
+import AddEditLog from '../../components/addedit-log';
+//----- STATS -----
 import Stats from '../../components/stats';
+//----- CATALOGUE -----
 import Catalogue from '../../components/catalogue';
 import AllConsoles from '../../components/allconsoles';
 import AddEditConsole from '../../components/addedit-console';
 import AllGames from '../../components/allgames';
 import AddEditGame from '../../components/addedit-game';
-import AllLogs from '../../components/alllogs';
 import Filter from '../../components/filter';
-import Menu from '../../components/menu';
+//----- test data -----
 import consoleData from '../../tempConsoleData.js';
 import gameData from '../../tempGameData.js';
 
@@ -26,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/all-logs">
             <AllLogs />
+          </Route>
+          <Route exact path="/edit-log">
+            <AddEditLog />
           </Route>
           <Route path="/stats">
             <Stats />

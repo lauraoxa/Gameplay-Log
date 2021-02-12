@@ -44,7 +44,6 @@ a:hover {
   text-shadow: 3px 3px 2px rgba(242, 242, 242, 0.5);
 }
 
-
 .catalogue__icon {
   margin-right: 4rem;
 }
@@ -70,6 +69,10 @@ a:hover {
   color: #F2F2F2;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
   margin-right: 0.7rem;
+}
+
+.button-addnew:hover {
+opacity: 0.8;
 }
 
 .catalogue__icon__addnew img {

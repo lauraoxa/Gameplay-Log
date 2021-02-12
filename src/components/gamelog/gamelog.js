@@ -18,7 +18,7 @@ function Gamelog() {
         </div>
         <div className="gamelog--menu__icon">
           <Tooltip title="Add a new log!" placement="left">
-            <Link to="/"><img src={iconadd} alt="" /></Link>
+            <Link to="/edit-log"><img src={iconadd} alt="" /></Link>
           </Tooltip>
         </div>
       </div> 

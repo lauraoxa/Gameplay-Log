@@ -6,6 +6,7 @@
   scrollbar-width: thin;
   scrollbar-color: #242020 #FFF;
   -webkit-overflow-scrolling: touch;
+  scrollbar-color: rgba(184,241,150,0.6) #242020;
 }
 
 ::-webkit-scrollbar {

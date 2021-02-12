@@ -1,19 +1,18 @@
 import './addedit-console.css';
+import {Link} from 'react-router-dom';
 import iconclose from '../../images/icon_close-black-48dp.svg';
-import {Button, ButtonSec} from '../../elements/buttons';
+import {Button} from '../../elements/buttons';
 
 function AddEditConsole() {
 
   return (
     <div className="form">
       <div className="form--icon">
-        <img src={iconclose} alt="" />
+        <Link to="/catalogue/allconsoles"><img src={iconclose} alt="" /></Link>
       </div>
       <div className="form--row">
-        <div className="form--text__big">
-          <div>
-            <label htmlFor="name">Console name:</label>
-          </div>
+        <div>
+          <label htmlFor="name">Console name:</label>
         </div>
       </div>
       <div className="form--row">
@@ -22,10 +21,8 @@ function AddEditConsole() {
         </div>
       </div>
       <div className="form--row">
-        <div className="form--text__big">
-          <div>
-            <label htmlFor="shortname">Shortname:</label>
-          </div>
+        <div>
+          <label htmlFor="shortname">Shortname:</label>
         </div>
       </div>
       <div className="form--row">
@@ -35,7 +32,6 @@ function AddEditConsole() {
       </div>
       <div className="form--buttons">
         <div><Button primary>{"save"}</Button></div>
-        <div><ButtonSec secondary>{"delete"}</ButtonSec></div>
       </div>
     </div>
   );

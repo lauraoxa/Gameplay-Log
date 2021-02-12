@@ -16,12 +16,14 @@ function Catalogue() {
             <Link to="/catalogue/allconsoles"><p>All consoles</p></Link>
             </div>
           </div>
-          <div className="button-addnew">
-            <div>Add<br/>new</div>
-            <div className="catalogue__icon__addnew">
-              <img src={iconadd} alt="" />
+          <Link to="/edit-console">
+            <div className="button-addnew">
+              <div>Add<br/>new</div>
+              <div className="catalogue__icon__addnew">
+                <img src={iconadd} alt="" />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="catalogue--allgames">
         <div className="catalogue__left">  
@@ -32,12 +34,14 @@ function Catalogue() {
             <p><Link to="catalogue/allgames">All games</Link></p>
             </div>
           </div>
-          <div className="button-addnew">
-            <div>Add<br/>new</div>
-            <div className="catalogue__icon__addnew">
-              <img src={iconadd} alt="" />
+          <Link to="/edit-game">
+            <div className="button-addnew">
+              <div>Add<br/>new</div>
+              <div className="catalogue__icon__addnew">
+                <img src={iconadd} alt="" />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="catalogue--filter">
           <div className="catalogue__icon">
