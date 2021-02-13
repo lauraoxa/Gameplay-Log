@@ -1,5 +1,8 @@
 import './app.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+//----- Firebase -----
+import {useFirestore, useFirestoreCollectionData} from 'reactfire';
+import 'firebase/firestore';
 //----- MAIN ELEMENTS -----
 import Header from '../../components/header';
 import Content from '../../components/content';
@@ -22,6 +25,16 @@ import consoleData from '../../tempConsoleData.js';
 import gameData from '../../tempGameData.js';
 
 function App() {
+
+  const consoleCollectionRef = useFirestore().collection('console');
+  const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef, {initialData: []});
+
+  const gameCollectionRef = useFirestore().collection('game');
+  const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef, {initialData: []});
+
+  const logCollectionRef = useFirestore().collection('log');
+  const {data: logCollection} = useFirestoreCollectionData(logCollectionRef, {initialData: []});
+
   return (
     <div className="app">
     <Router>
