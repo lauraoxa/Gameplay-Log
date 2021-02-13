@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;600&display=swap');
 
-.form {
+.form--game {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 
 /*----- close icon -----*/
-.form--icon {
+.form--game__icon {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -21,51 +21,74 @@
   padding-bottom: 0.75rem; 
 }
 
-.form--row {
+.form--game__row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 1rem;
   line-height: 2;
 }
 
 /*----- big label text -----*/
-.form label {
+.form--game label {
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-weight: 300;
-  font-size: 1.8rem;
+  font-weight: 200;
+  font-size: 1.7rem;
   color: #F2F2F2;
   text-shadow: 1px 1px 0px #000000;
   text-align: left;
 }
 
-/*----- form selections -----*/
-.form [type="option"], .form [type="text"], .form [type="multiple"] {
+/*----- form input -----*/
+.form--game [type="text"] {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
-  font-size: 1.4rem;
-  color: #F2F2F2;
+  font-size: 1rem;
+  color: #242020;
+  text-transform: none;
+  text-align: left;
+  width: 60vw;
+  max-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+/*----- form selections -----*/
+.form--game select, .form--game [type="multiple"] {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #242020;
   text-transform: uppercase;
   text-align: left;
- 
+  width: 60vw;
+  max-width: 20rem;
 }
 
 /*----- storage selection -----*/
-.form--storage-selection {
-  display: inline-flex;
+.form--game__storage {
+  display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
+  right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.form [type="radio"] {
+.form--game__storage label {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.form--game [type="radio"] {
   position: relative;
-  top: 0.5rem;
-  left: 8rem;
+  margin-right: 0.5rem;
+  margin-left: 2.5rem;
 }
 
 /*----- buttons -----*/
-.form--buttons {
+.form--game__buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

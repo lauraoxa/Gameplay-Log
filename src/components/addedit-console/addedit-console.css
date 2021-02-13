@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;600&display=swap');
 
-.form {
+.form--console {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
   background-color:	rgba(184, 241, 150, 0.6);
   margin: 1rem 0.3rem;
-  padding: 1rem;
   box-shadow: 1px 2px 2px #000000;
-  height:max-content;
+  height: max-content;
+  padding: 1rem;
 }
 
 /*----- close icon -----*/
-.form--icon {
+.form--console__icon {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -21,31 +21,38 @@
   padding-bottom: 0.75rem; 
 }
 
-.form--row {
+.form--console__row {
+  display: flex;
+  flex-direction: row;
   padding-left: 3rem;
+  line-height: 2;
 }
 
 /*----- big label text -----*/
-.form label {
+.form--console label {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
-  font-size: 2.5rem;
-  color: #F2F2F2;
+  font-size: 1.7rem;
+  color: #f2f2f2;
   text-shadow: 1px 1px 0px #000000;
   text-align: left;
 }
 
-.form input {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  line-height: 2;
+/*----- input text -----*/
+.form--console [type="text"] {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+  color: #242020;
+  text-align: left;
   width: 80vw;
   max-width: 20rem;
+  margin-bottom: 1rem;
 }
 
 /*----- bottom buttons -----*/
-.form--buttons {
+.form--console__buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

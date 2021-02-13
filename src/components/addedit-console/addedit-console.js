@@ -6,31 +6,31 @@ import {Button} from '../../elements/buttons';
 function AddEditConsole() {
 
   return (
-    <div className="form">
-      <div className="form--icon">
+    <div className="form--console">
+      <div className="form--console__icon">
         <Link to="/catalogue/allconsoles"><img src={iconclose} alt="" /></Link>
       </div>
-      <div className="form--row">
+      <div className="form--console__row">
         <div>
-          <label htmlFor="name">Console name:</label>
+          <label htmlFor="consolename">Console name:</label>
         </div>
       </div>
-      <div className="form--row">
+      <div className="form--console__row">
         <div>
-          <input type="text" name="name" />
+          <input type="text" name="consolename" />
         </div>
       </div>
-      <div className="form--row">
+      <div className="form--console__row">
         <div>
           <label htmlFor="shortname">Shortname:</label>
         </div>
       </div>
-      <div className="form--row">
+      <div className="form--console__row">
         <div>
           <input type="text" name="shortname" />
         </div>
       </div>
-      <div className="form--buttons">
+      <div className="form--console__buttons">
         <div><Button primary>{"save"}</Button></div>
       </div>
     </div>

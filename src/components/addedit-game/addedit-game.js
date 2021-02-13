@@ -6,11 +6,11 @@ import {Button} from '../../elements/buttons';
 function AddEditGame() {
 
   return (
-    <div className="form">
-      <div className="form--icon">
+    <div className="form--game">
+      <div className="form--game__icon">
         <Link to="/catalogue/allgames"><img src={iconclose} alt="" /></Link>
       </div>
-      <div className="form--row">
+      <div className="form--game__row">
         <div>
           <label htmlFor="name">Game title:</label>
         </div>
@@ -19,7 +19,7 @@ function AddEditGame() {
         </div>
       </div>
 
-      <div className="form--row">
+      <div className="form--game__row">
         <div>
           <label htmlFor="format">Game platform:</label>
         </div>
@@ -30,20 +30,16 @@ function AddEditGame() {
         </div>
       </div>
 
-      <div className="form--row">
-        <div className="form--storage-selection">
+      <div className="form--game__row">
+        <div className="form--game__storage">
           <input type="radio" name="storage" id="disc" value="disc" />
           <label htmlFor="disc">disc/cart</label>
-        </div>
-      </div>
-      <div className="form--row">
-        <div className="form--storage-selection">
           <input type="radio" name="storage" id="digital" value="digital" />
           <label htmlFor="digital">digital</label>
         </div>
       </div>
 
-      <div className="form--row">
+      <div className="form--game__row">
         <div>
           <label htmlFor="playableOn">Playable on:</label>
         </div>
@@ -54,7 +50,7 @@ function AddEditGame() {
         </div>
       </div>
 
-      <div className="form--buttons">
+      <div className="form--game__buttons">
         <div><Button primary>{"save"}</Button></div>
       </div>
     </div>
