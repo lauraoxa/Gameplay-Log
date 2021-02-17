@@ -1,4 +1,5 @@
 import './app.css';
+import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 //----- Firebase -----
 import {useFirestore, useFirestoreCollectionData} from 'reactfire';
@@ -26,6 +27,11 @@ import gameData from '../../tempGameData.js';
 
 function App() {
 
+  const [consoles, setConsoles] = useState([]); 
+  const [games, setGames] = useState([]); 
+  const [logs, setLogs] = useState([]); 
+  
+
   const consoleCollectionRef = useFirestore().collection('console');
   const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef, {initialData: []});
 
@@ -35,13 +41,34 @@ function App() {
   const logCollectionRef = useFirestore().collection('log');
   const {data: logCollection} = useFirestoreCollectionData(logCollectionRef, {initialData: []});
 
+  
+  useEffect(() => {
+    setConsoles(consoleCollection);
+    }, [consoleCollection]);
+
+  useEffect(() => {
+    setGames(gameCollection);
+    }, [gameCollection]);
+
+    useEffect(() => {
+      setLogs(logCollection);
+      }, [logCollection]);
+
+  /*
+  
+  useEffect(() => {
+    const types = typeCollection.map(obj => obj.type);
+    setTypelist(types);
+  }, [typeCollection]); 
+  */
+
   return (
     <div className="app">
     <Router>
         <Header />
         <Content>
           <Route exact path="/">
-            <Gamelog consoleData={consoleData} gameData={gameData}/>
+            <Gamelog consoleData={consoleCollection} gameData={gameCollection} />
           </Route>
           <Route exact path="/all-logs">
             <AllLogs />
@@ -56,13 +83,13 @@ function App() {
             <Catalogue />
           </Route>
           <Route exact path="/catalogue/allconsoles">
-            <AllConsoles consoleData={consoleData} />
+            <AllConsoles consoleData={consoleCollection} />
           </Route>
           <Route path="/edit-console">
           <AddEditConsole />
         </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames gameData={gameData}/>
+            <AllGames gameData={gameCollection} />
           </Route>
           <Route path="/edit-game">
           <AddEditGame />
