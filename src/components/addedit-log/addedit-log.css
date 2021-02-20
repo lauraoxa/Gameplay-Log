@@ -21,6 +21,10 @@
   padding-bottom: 0.75rem; 
 }
 
+.form--log__icon :hover {
+  filter: invert(0.9);
+}
+
 .form--log__row {
   display: flex;
   flex-direction: row;
