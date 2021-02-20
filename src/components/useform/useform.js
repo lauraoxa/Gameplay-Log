@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const formActions = (callback, initialState={}, resetOnSubmit=true) => {
+const useForm = (callback, initialState={}, resetOnSubmit=true) => {
 
   /* introduction of useState-hook, 
   into which user's information input  is saved */
@@ -15,11 +15,6 @@ const formActions = (callback, initialState={}, resetOnSubmit=true) => {
     callback();
     if (resetOnSubmit) resetValues();
   }
-
-  // Resets form to original state
-  const resetValues = () => {
-    setValues(initialState);
-  }
   
   // Change handler saves field data with its name to a state variable
   const handleChange = (event) => {
@@ -29,7 +24,11 @@ const formActions = (callback, initialState={}, resetOnSubmit=true) => {
     // Saving new value to state
     setValues(values => ({...values, [event.target.name]: value}));
   }
-
+  
+  // Resets form to original state
+  const resetValues = () => {
+    setValues(initialState);
+  }
 
   // Upon creation, return handler and state-variable
   return {
@@ -42,4 +41,4 @@ const formActions = (callback, initialState={}, resetOnSubmit=true) => {
 
 }
 
-export default formActions;
+export default useForm;
