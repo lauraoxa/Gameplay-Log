@@ -17,13 +17,12 @@ import Stats from '../../components/stats';
 //----- CATALOGUE -----
 import Catalogue from '../../components/catalogue';
 import AllConsoles from '../../components/allconsoles';
-import AddEditConsole from '../../components/addedit-console';
+import AddConsole from '../../components/add-console';
+import EditConsole from '../../components/edit-console';
 import AllGames from '../../components/allgames';
-import AddEditGame from '../../components/addedit-game';
+import AddGame from '../../components/add-game';
+import EditGame from '../../components/edit-game';
 import Filter from '../../components/filter';
-//----- test data -----
-import consoleData from '../../tempConsoleData.js';
-import gameData from '../../tempGameData.js';
 
 function App() {
 
@@ -33,14 +32,14 @@ function App() {
   
 
   const consoleCollectionRef = useFirestore().collection('console');
-  const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef, {initialData: []});
+  const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
 
   const gameCollectionRef = useFirestore().collection('game');
-  const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef, {initialData: []});
+  const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef, {initialData: [], idField: "id"});
 
   const logCollectionRef = useFirestore().collection('log');
-  const {data: logCollection} = useFirestoreCollectionData(logCollectionRef, {initialData: []});
-
+  const {data: logCollection} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc"), {initialData: [], idField: "id"});
+  const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(20), {initialData: [], idField: "id"});
   
   useEffect(() => {
     setConsoles(consoleCollection);
@@ -54,6 +53,17 @@ function App() {
       setLogs(logCollection);
       }, [logCollection]);
 
+  const handleConsoleSubmit = (newconsole) => {
+    consoleCollectionRef.doc(newconsole.id).set(newconsole);
+  }
+
+  const handleGameSubmit = (newgame) => {
+    gameCollectionRef.doc(newgame.id).set(newgame);
+  }
+
+  const handleLogDelete = (id) => {
+    logCollectionRef.doc(id).delete();
+  }
   /*
   
   useEffect(() => {
@@ -68,10 +78,10 @@ function App() {
         <Header />
         <Content>
           <Route exact path="/">
-            <Gamelog consoleData={consoleCollection} gameData={gameCollection} />
+            <Gamelog consoleData={consoles} gameData={games} />
           </Route>
           <Route exact path="/all-logs">
-            <AllLogs />
+            <AllLogs allLogData={logCollection} />
           </Route>
           <Route exact path="/edit-log">
             <AddEditLog />
@@ -83,17 +93,23 @@ function App() {
             <Catalogue />
           </Route>
           <Route exact path="/catalogue/allconsoles">
-            <AllConsoles consoleData={consoleCollection} />
+            <AllConsoles consoleData={consoles} />
           </Route>
-          <Route path="/edit-console">
-          <AddEditConsole />
-        </Route>
+          <Route path="/add-console">
+            <AddConsole onConsoleSubmit={handleConsoleSubmit} />
+          </Route>
+          <Route path="/edit-console/:id">
+            <EditConsole onConsoleSubmit={handleConsoleSubmit} consoleData={consoles} />
+          </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames gameData={gameCollection} />
+            <AllGames gameData={games} />
           </Route>
-          <Route path="/edit-game">
-          <AddEditGame />
-        </Route>
+          <Route path="/add-game">
+            <AddGame onGameSubmit={handleGameSubmit} consoleData={consoles} />
+          </Route>
+          <Route path="/edit-game/:id">
+            <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleData={consoles} />
+          </Route>
           <Route exact path="/catalogue/filter">
             <Filter />
           </Route>

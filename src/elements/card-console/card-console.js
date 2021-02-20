@@ -1,4 +1,5 @@
 import './card-console.css';
+import {Link} from 'react-router-dom';
 import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardConsole(props) {
@@ -19,7 +20,7 @@ function CardConsole(props) {
         </div>
       </div>
       <div className="card-log--edit">
-        <p>edit</p>
+      <Link to={"/edit-console/"+props.consoleData.id}><p>edit</p></Link>
       </div>
     </div>
   );

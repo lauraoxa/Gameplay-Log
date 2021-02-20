@@ -16,7 +16,7 @@ function Catalogue() {
             <Link to="/catalogue/allconsoles"><p>All consoles</p></Link>
             </div>
           </div>
-          <Link to="/edit-console">
+          <Link to="/add-console">
             <div className="button-addnew">
               <div>Add<br/>new</div>
               <div className="catalogue__icon__addnew">

@@ -1,4 +1,5 @@
 import './card-game.css';
+import {Link} from 'react-router-dom';
 import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardGame(props) {
@@ -15,7 +16,7 @@ function CardGame(props) {
         </div>
       </div>
       <div className="card-game--edit">
-        <p>edit</p>
+      <Link to={"/edit-game/"+props.gameData.id}><p>edit</p></Link>
       </div>
     </div>
   );
