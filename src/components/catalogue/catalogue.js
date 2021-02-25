@@ -34,7 +34,7 @@ function Catalogue() {
             <p><Link to="catalogue/allgames">All games</Link></p>
             </div>
           </div>
-          <Link to="/edit-game">
+          <Link to="/add-game">
             <div className="button-addnew">
               <div>Add<br/>new</div>
               <div className="catalogue__icon__addnew">

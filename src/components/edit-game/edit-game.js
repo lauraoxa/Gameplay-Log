@@ -9,7 +9,7 @@ function EditGame(props) {
 
   return (
       <div>
-        <AddEditGame onGameSubmit={props.onGameSubmit} gameData={game}/>
+        <AddEditGame onGameSubmit={props.onGameSubmit} gameData={game} consoleShortnames={props.consoleShortnames} />
       </div>
   );
 }

@@ -20,9 +20,8 @@
   height: 3rem;
   }
 
-  .button:hover {
+  .button:visited, .button:hover, .button:active {
     background: rgba(36,32,32,0.2);
-    font-size: 2.1rem;
   }
 
   /* Save, Filter */
@@ -44,32 +43,32 @@
   height: 3rem;
   }
 
-  .button--secondary:hover {
-    background: rgba(242, 242, 242, 0.6);
-    font-size: 2.1rem;
+  .button--secondary:visited, .button--secondary:hover, .button--secondary:active {
+    background: rgba(187, 187, 187, 0.9);
   }
 
     /* Disabled */
-.button--disabled, .button--disabled:hover {
-  opacity: 0.5;
-  background: rgba(242, 242, 242, 0.8);
-  box-shadow: 2px 2px 1px #000000;
-  border-radius: 5px;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  color: rgba(36,32,32,0.8);
-  font-weight:500;
-  font-size: 2rem;
-  text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.9);
-  text-transform: uppercase;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  width: 7rem;
-  height: 3rem;
-  }
+    .button--disabled, .button--disabled:visited, .button--disabled:hover {
+    opacity: 0.5;
+    background: rgba(242, 242, 242, 0.8);
+    box-shadow: 2px 2px 1px #000000;
+    border-radius: 5px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: rgba(36,32,32,0.8);
+    font-weight:500;
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 3rem;
+    }
 
-  .button--square, .button--square:hover {
+    /* GO! */
+  .button--square, {
     background: rgba(242, 242, 242, 0.8);
     box-shadow: 2px 2px 1px #000000;
     border-radius: 5px;
@@ -85,8 +84,8 @@
     justify-content: center;
     width: 7rem;
     height: 7rem;
-    }
+  }
   
-  .button--square:hover {
+  .button--square:visited, .button--square:hover, .button--square:active {
     background: rgba(242, 242, 242, 1);
   }

@@ -37,7 +37,7 @@
 .form--game label {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #F2F2F2;
   text-shadow: 1px 1px 0px #000000;
   text-align: left;
@@ -47,7 +47,7 @@
 .form--game [type="text"] {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #242020;
   text-transform: none;
   text-align: left;
@@ -57,10 +57,10 @@
 }
 
 /*----- form selections -----*/
-.form--game select, .form--game [type="multiple"] {
+.form--game select, .form--game__select {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #242020;
   text-transform: uppercase;
   text-align: left;
@@ -78,16 +78,15 @@
   position: relative;
   right: 1rem;
   margin-bottom: 0.5rem;
-}
-
-.form--game__storage label {
-  font-size: 1.5rem;
-  text-align: right;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
 .form--game [type="radio"] {
   position: relative;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   margin-left: 2.5rem;
 }
 

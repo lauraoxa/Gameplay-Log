@@ -11,7 +11,6 @@ function AddEditConsole(props) {
 
   const submit = () => {
     let storedvalues = Object.assign({}, values);
-   // storedvalues.amount = parseFloat(storedvalues.amount);
     storedvalues.id = storedvalues.id ? storedvalues.id : uuidv4();
     props.onConsoleSubmit(storedvalues);
     history.push("/catalogue/allconsoles");

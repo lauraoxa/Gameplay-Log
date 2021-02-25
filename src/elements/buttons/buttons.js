@@ -48,7 +48,7 @@ const ButtonDisabled = ({className="", disabled, ...props}) => {
   );
 }
 // button--square: GO!
-const ButtonSquare = ({ className = "", ...props}) => {
+const ButtonSquare = ({ className = "", square, ...props}) => {
   return (
       <Button
           className={classNames([

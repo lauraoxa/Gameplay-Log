@@ -9,8 +9,6 @@ function AddEditGame(props) {
 
   const history = useHistory();
 
-  // !!! -----> const consoles = (props.consoleData.name);
-
   const submit = () => {
     let storedvalues = Object.assign({}, values);
     storedvalues.id = storedvalues.id ? storedvalues.id : uuidv4();
@@ -20,9 +18,8 @@ function AddEditGame(props) {
 
   const initialState = props.gameData ? props.gameData : {
     name: "",
-    format: "",
-    storage: [],
-    playableOn: [],
+    format: props.consoleShortnames ? props.consoleShortnames[0] : "",
+    storage: ""
   };
 
   const {values, handleChange, handleSubmit} = useForm(submit, initialState, false);
@@ -30,9 +27,10 @@ function AddEditGame(props) {
   const handleCancel = (event) => {
     event.preventDefault();
     history.goBack();
-  }
+  }  
 
   return (
+
     <div className="form--game">
       <form onSubmit={handleSubmit}>
         <div className="form--game__icon">
@@ -52,29 +50,17 @@ function AddEditGame(props) {
             <label htmlFor="format">Game platform:</label>
           </div>
           <div>
-            <select name="format" >
-              <option>consoles list</option>
+              <select name="format" onChange={handleChange} value={values.format}>
+              <option>select...</option>
+              {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
         </div>
 
         <div className="form--game__row">
-          <div className="form--game__storage">
-            <input type="radio" name="storage" id="disc" onChange={handleChange} value={values.storage} />
-            <label htmlFor="disc">disc/cart</label>
-            <input type="radio" name="storage" id="digital" onChange={handleChange} value={values.storage} />
-            <label htmlFor="digital">digital</label>
-          </div>
-        </div>
-
-        <div className="form--game__row">
-          <div>
-            <label htmlFor="playableOn">Playable on:</label>
-          </div>
-          <div>
-            <select name="playableOn" id="playableOn" multiple onChange={handleChange} value={values.playableOn} >
-              <option>select playable format...</option>
-            </select>
+          <div className="form--game__storage" value={values.storage}>
+            <input type="radio" name="storage" id="disc" value="disc/cart" checked={values.storage === "disc/cart"} onChange={handleChange} /> disc/cart
+            <input type="radio" name="storage" id="digital" value="digital" checked={values.storage === "digital"} onChange={handleChange} /> digital
           </div>
         </div>
 

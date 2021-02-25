@@ -3,11 +3,12 @@ import {Link} from 'react-router-dom';
 import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardGame(props) {
-  return(
+
+  return (
     <div className="card-game">
       <div className="card-game--left">
         <div className="card-game__title">{props.gameData.name}</div>
-        <div className="card-game__format">{props.gameData.format}</div>
+        <div className="card-game__format">{props.gameData.format} ({props.gameData.storage})</div>
       </div>
       <div className="card-game--statistics">
         <div className="card-game--row">

@@ -36,7 +36,7 @@
 .form--console label {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #f2f2f2;
   text-shadow: 1px 1px 0px #000000;
   text-align: left;
@@ -46,7 +46,7 @@
 .form--console [type="text"] {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-transform: none;
   color: #242020;
   text-align: left;

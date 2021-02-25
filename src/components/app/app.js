@@ -27,15 +27,16 @@ import Filter from '../../components/filter';
 function App() {
 
   const [consoles, setConsoles] = useState([]); 
+  const [consoleNames, setConsoleNames] = useState([]);
+  const [consoleShortnames, setConsoleShortnames] = useState([]);
   const [games, setGames] = useState([]); 
   const [logs, setLogs] = useState([]); 
-  
 
   const consoleCollectionRef = useFirestore().collection('console');
   const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
 
   const gameCollectionRef = useFirestore().collection('game');
-  const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef, {initialData: [], idField: "id"});
+  const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
 
   const logCollectionRef = useFirestore().collection('log');
   const {data: logCollection} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc"), {initialData: [], idField: "id"});
@@ -44,6 +45,16 @@ function App() {
   useEffect(() => {
     setConsoles(consoleCollection);
     }, [consoleCollection]);
+
+  useEffect(() => {
+    const consoleNames = consoleCollection.map(obj => obj.name);
+    setConsoleNames(consoleNames);
+  }, [consoleCollection]); 
+
+  useEffect(() => {
+    const consoleShortnames = consoleCollection.map(obj => obj.shortname);
+    setConsoleShortnames(consoleShortnames);
+  }, [consoleCollection]); 
 
   useEffect(() => {
     setGames(gameCollection);
@@ -61,16 +72,13 @@ function App() {
     gameCollectionRef.doc(newgame.id).set(newgame);
   }
 
+  const handleLogSubmit = (newlog) => {
+    logCollectionRef.doc(newlog.id).set(newlog);
+  }
+
   const handleLogDelete = (id) => {
     logCollectionRef.doc(id).delete();
   }
-  /*
-  
-  useEffect(() => {
-    const types = typeCollection.map(obj => obj.type);
-    setTypelist(types);
-  }, [typeCollection]); 
-  */
 
   return (
     <div className="app">
@@ -102,13 +110,13 @@ function App() {
             <EditConsole onConsoleSubmit={handleConsoleSubmit} consoleData={consoles} />
           </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames gameData={games} />
+            <AllGames gameData={games} consoleData={consoles} />
           </Route>
           <Route path="/add-game">
-            <AddGame onGameSubmit={handleGameSubmit} consoleData={consoles} />
+            <AddGame onGameSubmit={handleGameSubmit} consoleShortnames={consoleShortnames} />
           </Route>
           <Route path="/edit-game/:id">
-            <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleData={consoles} />
+            <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleShortnames={consoleShortnames} />
           </Route>
           <Route exact path="/catalogue/filter">
             <Filter />
