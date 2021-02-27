@@ -32,6 +32,7 @@ function App() {
   const [consoleShortnames, setConsoleShortnames] = useState([]);
   const [games, setGames] = useState([]); 
   const [logs, setLogs] = useState([]); 
+  const [logsFull, setLogsFull] = useState([]);
 
   const consoleCollectionRef = useFirestore().collection('console');
   const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
@@ -41,7 +42,7 @@ function App() {
 
   const logCollectionRef = useFirestore().collection('log');
   const {data: logCollection} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc"), {initialData: [], idField: "id"});
-  const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(20), {initialData: [], idField: "id"});
+  const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(5), {initialData: [], idField: "id"});
   
   useEffect(() => {
     setConsoles(consoleCollection);
@@ -62,9 +63,13 @@ function App() {
     }, [gameCollection]);
 
     useEffect(() => {
-      setLogs(logCollection);
+      setLogsFull(logCollection);
       }, [logCollection]);
 
+    useEffect(() => {
+      setLogs(logCollection20);
+      }, [logCollection20]);
+      
   const handleConsoleSubmit = (newconsole) => {
     consoleCollectionRef.doc(newconsole.id).set(newconsole);
   }
@@ -87,10 +92,10 @@ function App() {
         <Header />
         <Content>
           <Route exact path="/">
-            <Gamelog consoleData={consoles} gameData={games} logData={logs} />
+            <Gamelog logData={logs} consoleData={consoles} gameData={games} />
           </Route>
           <Route exact path="/all-logs">
-            <AllLogs allLogData={logCollection} />
+            <AllLogs logDataFull={logsFull} consoleData={consoles} gameData={games} />
           </Route>
           <Route exact path="/add-log">
             <AddLog onLogSubmit={handleLogSubmit} consoleShortnames={consoleShortnames} consoleNames={consoleNames} />
