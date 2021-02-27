@@ -5,8 +5,9 @@ import CardLog from '../../elements/card-log';
 import iconadd from '../../images/icon_add_box-white-48dp.svg';
 import iconlist from '../../images/icon_article-white-48dp.svg';
 
-function Gamelog() {
+function Gamelog(props) {
   
+  const logs = props.logData.map( (log) => <CardLog key={log.id} logData={log} />);
 
   return (
     <div className="gamelog">
@@ -18,19 +19,12 @@ function Gamelog() {
         </div>
         <div className="gamelog--menu__icon">
           <Tooltip title="Add a new log!" placement="left">
-            <Link to="/edit-log"><img src={iconadd} alt="" /></Link>
+            <Link to="/add-log"><img src={iconadd} alt="" /></Link>
           </Tooltip>
         </div>
       </div> 
       <div className="gamelog--entries">
-        <CardLog />
-        <CardLog />
-        <CardLog />
-        <CardLog />
-        <CardLog />
-        <CardLog />
-        <CardLog />
-        <CardLog />
+        {logs}
       </div>  
     </div>
   );

@@ -11,7 +11,8 @@ import Menu from '../../components/menu';
 //----- GAME LOG -----
 import Gamelog from '../../components/gamelog';
 import AllLogs from '../../components/alllogs';
-import AddEditLog from '../../components/addedit-log';
+import AddLog from '../../components/add-log';
+import EditLog from '../../components/edit-log';
 //----- STATS -----
 import Stats from '../../components/stats';
 //----- CATALOGUE -----
@@ -86,13 +87,16 @@ function App() {
         <Header />
         <Content>
           <Route exact path="/">
-            <Gamelog consoleData={consoles} gameData={games} />
+            <Gamelog consoleData={consoles} gameData={games} logData={logs} />
           </Route>
           <Route exact path="/all-logs">
             <AllLogs allLogData={logCollection} />
           </Route>
-          <Route exact path="/edit-log">
-            <AddEditLog />
+          <Route exact path="/add-log">
+            <AddLog onLogSubmit={handleLogSubmit} consoleShortnames={consoleShortnames} consoleNames={consoleNames} />
+          </Route>
+          <Route exact path="/edit-log/:id">
+            <EditLog onLogSubmit={handleLogSubmit} onLogDelete={handleLogDelete} logData={logs} consoleShortnames={consoleShortnames} consoleNames={consoleNames} />
           </Route>
           <Route path="/stats">
             <Stats />

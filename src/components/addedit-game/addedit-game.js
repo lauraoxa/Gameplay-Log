@@ -51,7 +51,6 @@ function AddEditGame(props) {
           </div>
           <div>
               <select name="format" onChange={handleChange} value={values.format}>
-              <option>select...</option>
               {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
