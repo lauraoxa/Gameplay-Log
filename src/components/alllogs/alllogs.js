@@ -7,7 +7,7 @@ function AllLogs(props) {
 
   
   return (
-    <div className="gamelog--entries">
+    <div className="alllogs">
     {logs}
   </div>  
   );

@@ -44,7 +44,7 @@
 }
 
 /*----- title input text -----*/
-.form--log [type="text"] {
+.form--log [type="list"] {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
   font-size: 1rem;

@@ -31,6 +31,7 @@ function App() {
   const [consoleNames, setConsoleNames] = useState([]);
   const [consoleShortnames, setConsoleShortnames] = useState([]);
   const [games, setGames] = useState([]); 
+  const [gameTitles, setGameTitles] = useState([]); 
   const [logs, setLogs] = useState([]); 
   const [logsFull, setLogsFull] = useState([]);
 
@@ -42,7 +43,7 @@ function App() {
 
   const logCollectionRef = useFirestore().collection('log');
   const {data: logCollection} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc"), {initialData: [], idField: "id"});
-  const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(5), {initialData: [], idField: "id"});
+  const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(20), {initialData: [], idField: "id"});
   
   useEffect(() => {
     setConsoles(consoleCollection);
@@ -61,6 +62,11 @@ function App() {
   useEffect(() => {
     setGames(gameCollection);
     }, [gameCollection]);
+
+  useEffect(() => {
+    const gameTitles = gameCollection.map(obj => obj.name);
+    setGameTitles(gameTitles);
+  }, [gameCollection]); 
 
     useEffect(() => {
       setLogsFull(logCollection);
@@ -98,10 +104,10 @@ function App() {
             <AllLogs logDataFull={logsFull} consoleData={consoles} gameData={games} />
           </Route>
           <Route exact path="/add-log">
-            <AddLog onLogSubmit={handleLogSubmit} consoleShortnames={consoleShortnames} consoleNames={consoleNames} />
+            <AddLog onLogSubmit={handleLogSubmit} consoleShortnames={consoleShortnames} consoleNames={consoleNames} gameData={games} gameTitles={gameTitles} />
           </Route>
           <Route exact path="/edit-log/:id">
-            <EditLog onLogSubmit={handleLogSubmit} onLogDelete={handleLogDelete} logData={logs} consoleShortnames={consoleShortnames} consoleNames={consoleNames} />
+            <EditLog onLogSubmit={handleLogSubmit} onLogDelete={handleLogDelete} logData={logs} consoleShortnames={consoleShortnames} consoleNames={consoleNames} gameData={games} gameTitles={gameTitles} />
           </Route>
           <Route path="/stats">
             <Stats />
