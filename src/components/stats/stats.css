@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+
+.stats {
+  color: #f2f2f2;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.stats p {
+  font-size: 1.5rem;
+}

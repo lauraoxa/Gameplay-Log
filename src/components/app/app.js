@@ -8,6 +8,7 @@ import 'firebase/firestore';
 import Header from '../../components/header';
 import Content from '../../components/content';
 import Menu from '../../components/menu';
+import Login from '../../components/login';
 //----- GAME LOG -----
 import Gamelog from '../../components/gamelog';
 import AllLogs from '../../components/alllogs';
@@ -32,6 +33,7 @@ function App() {
   const [consoleShortnames, setConsoleShortnames] = useState([]);
   const [games, setGames] = useState([]); 
   const [gameTitles, setGameTitles] = useState([]); 
+  const [gameFormats, setGameFormats] = useState([]); 
   const [logs, setLogs] = useState([]); 
   const [logsFull, setLogsFull] = useState([]);
 
@@ -68,13 +70,18 @@ function App() {
     setGameTitles(gameTitles);
   }, [gameCollection]); 
 
-    useEffect(() => {
-      setLogsFull(logCollection);
-      }, [logCollection]);
+  useEffect(() => {
+    const gameFormats = gameCollection.map(obj => obj.format);
+    setGameFormats(gameFormats);
+  }, [gameCollection]); 
 
-    useEffect(() => {
-      setLogs(logCollection20);
-      }, [logCollection20]);
+  useEffect(() => {
+    setLogsFull(logCollection);
+    }, [logCollection]);
+
+  useEffect(() => {
+    setLogs(logCollection20);
+    }, [logCollection20]);
       
   const handleConsoleSubmit = (newconsole) => {
     consoleCollectionRef.doc(newconsole.id).set(newconsole);
@@ -109,14 +116,11 @@ function App() {
           <Route exact path="/edit-log/:id">
             <EditLog onLogSubmit={handleLogSubmit} onLogDelete={handleLogDelete} logData={logs} consoleShortnames={consoleShortnames} consoleNames={consoleNames} gameData={games} gameTitles={gameTitles} />
           </Route>
-          <Route path="/stats">
-            <Stats />
-          </Route>
           <Route exact path="/catalogue">
             <Catalogue />
           </Route>
           <Route exact path="/catalogue/allconsoles">
-            <AllConsoles consoleData={consoles} />
+            <AllConsoles consoleData={consoles} logData={logs} />
           </Route>
           <Route path="/add-console">
             <AddConsole onConsoleSubmit={handleConsoleSubmit} />
@@ -125,7 +129,7 @@ function App() {
             <EditConsole onConsoleSubmit={handleConsoleSubmit} consoleData={consoles} />
           </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames gameData={games} consoleData={consoles} />
+            <AllGames gameData={games} consoleData={consoles} logData={logs} />
           </Route>
           <Route path="/add-game">
             <AddGame onGameSubmit={handleGameSubmit} consoleShortnames={consoleShortnames} />
@@ -134,7 +138,13 @@ function App() {
             <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleShortnames={consoleShortnames} />
           </Route>
           <Route exact path="/catalogue/filter">
-            <Filter />
+            <Filter consoleShortnames={consoleShortnames} consoleData={consoles} gameData={games} gameFormats={gameFormats} />
+          </Route>
+          <Route path="/stats">
+            <Stats />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Content>
         <Menu />
