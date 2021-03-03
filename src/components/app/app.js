@@ -24,7 +24,6 @@ import EditConsole from '../../components/edit-console';
 import AllGames from '../../components/allgames';
 import AddGame from '../../components/add-game';
 import EditGame from '../../components/edit-game';
-import Filter from '../../components/filter';
 
 function App() {
 
@@ -129,16 +128,13 @@ function App() {
             <EditConsole onConsoleSubmit={handleConsoleSubmit} consoleData={consoles} />
           </Route>
           <Route exact path="/catalogue/allgames">
-            <AllGames gameData={games} consoleData={consoles} logData={logs} />
+            <AllGames gameData={games} consoleData={consoles} consoleShortnames={consoleShortnames} logData={logs} />
           </Route>
           <Route path="/add-game">
             <AddGame onGameSubmit={handleGameSubmit} consoleShortnames={consoleShortnames} />
           </Route>
           <Route path="/edit-game/:id">
             <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleShortnames={consoleShortnames} />
-          </Route>
-          <Route exact path="/catalogue/filter">
-            <Filter consoleShortnames={consoleShortnames} consoleData={consoles} gameData={games} gameFormats={gameFormats} />
           </Route>
           <Route path="/stats">
             <Stats />

@@ -2,7 +2,6 @@ import './catalogue.css';
 import {Link} from 'react-router-dom';
 import iconarticle from '../../images/icon_article-white-48dp.svg';
 import iconadd from '../../images/icon_add_box-white-48dp.svg';
-import iconfilter from '../../images/icon_filter_alt-white-48dp.svg'; 
 
 function Catalogue() {
   return(      
@@ -42,14 +41,6 @@ function Catalogue() {
               </div>
             </div>
           </Link>
-        </div>
-        <div className="catalogue--filter">
-          <div className="catalogue__icon">
-            <img src={iconfilter} alt="" />
-          </div>
-          <div>
-          <Link to="/catalogue/filter"><p>Filter by console</p></Link>
-          </div>
         </div>
       </div>
   );

@@ -16,7 +16,7 @@ function CardConsole(props) {
         </div>
         <div className="card-console--row">
           <div className="card-console__icon"><img src={icontime} alt="" /></div>
-          <div className="card-console__playtime">{props.consoleData.playedTotalTime}</div>
+          <div className="card-console__playtime">played time total</div>
         </div>
       </div>
       <div className="card-log--edit">

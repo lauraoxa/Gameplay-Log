@@ -22,7 +22,8 @@ function AddEditLog(props) {
     console: props.consoleNames ? props.consoleNames[0] : "",
     date: new Date().toISOString().substring(0,10),
     sessionStart: "",
-    sessionEnd: ""
+    sessionEnd: "",
+    sessionMS: 0
   };
 
   const {values, handleChange, handleSubmit} = useForm(submit, initialState, false);
@@ -37,6 +38,16 @@ function AddEditLog(props) {
     props.onLogDelete(values.id);
     history.goBack();
   }
+
+  var sessionMS, sessionStart, sessionEnd;
+  const sessionToMS = (sessionStart, sessionEnd) => {
+    const start = sessionStart.split(':');
+    const end = sessionEnd.split(':');
+    const startToMS = (+start[0]) * 60 * 60 * 1000 + (+start[1]) * 60 * 1000;
+    const endToMS = (+end[0]) * 60 * 60 * 1000 + (+end[1]) * 60 * 1000;
+    sessionMS = (endToMS-startToMS);
+  }
+
 
   return (
     <div className="form--log">
@@ -79,11 +90,12 @@ function AddEditLog(props) {
             <label htmlFor="session">Session:</label>
           <div className="form--log__row">
             <div>
-              <input type="time" name="sessionStart" onChange={handleChange} value={values.sessionStart} />
+              <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={values.sessionStart} />
             </div>
             <div >
-              <input type="time" name="sessionEnd" onChange={handleChange} value={values.sessionEnd} />
+              <input type="time" name="sessionEnd" id="sessionEnd" onChange={handleChange} value={values.sessionEnd} />
             </div>
+            <input type="hidden" onChange={handleChange} id="sessionMS" name="sessionMS" value={values.sessionMS} />
           </div>
         </div>
         
@@ -92,9 +104,6 @@ function AddEditLog(props) {
           {props.onLogDelete ? <div><ButtonSec secondary onClick={handleDelete}>delete</ButtonSec></div> : "" }
         </div>
       </form>
-
-  
-
     </div>
   );
 }

@@ -6,7 +6,7 @@ import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardLog(props) {
 
-
+  //working code - counts "12:00" to "13:00" into millisecond, then displays HH:MM
   let sessionMin, sessionHour, sessionFull;
 
   if (props.logData.sessionStart && props.logData.sessionEnd) {
@@ -25,7 +25,6 @@ function CardLog(props) {
 
     sessionFull = (sessionHour + ":" + sessionMin);  
   }
-    
 
   return (
     <div className="card-log">
