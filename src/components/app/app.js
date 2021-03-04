@@ -32,7 +32,6 @@ function App() {
   const [consoleShortnames, setConsoleShortnames] = useState([]);
   const [games, setGames] = useState([]); 
   const [gameTitles, setGameTitles] = useState([]); 
-  const [gameFormats, setGameFormats] = useState([]); 
   const [logs, setLogs] = useState([]); 
   const [logsFull, setLogsFull] = useState([]);
 
@@ -67,11 +66,6 @@ function App() {
   useEffect(() => {
     const gameTitles = gameCollection.map(obj => obj.name);
     setGameTitles(gameTitles);
-  }, [gameCollection]); 
-
-  useEffect(() => {
-    const gameFormats = gameCollection.map(obj => obj.format);
-    setGameFormats(gameFormats);
   }, [gameCollection]); 
 
   useEffect(() => {

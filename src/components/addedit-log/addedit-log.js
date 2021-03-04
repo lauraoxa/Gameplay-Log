@@ -4,13 +4,14 @@ import iconclose from '../../images/icon_close-black-48dp.svg';
 import {Button, ButtonSec} from '../../elements/buttons';
 import useForm from '../useform/useform.js';
 import {v4 as uuidv4} from 'uuid';
+import {useState, useEffect} from 'react';
 
 function AddEditLog(props) {
 
   const history = useHistory();
 
   const submit = () => {
-    let storedvalues = Object.assign({}, values);
+    let storedvalues = Object.assign({}, formValues);
     storedvalues.id = storedvalues.id ? storedvalues.id : uuidv4();
     props.onLogSubmit(storedvalues);
     history.goBack();
@@ -22,11 +23,11 @@ function AddEditLog(props) {
     console: props.consoleNames ? props.consoleNames[0] : "",
     date: new Date().toISOString().substring(0,10),
     sessionStart: "",
-    sessionEnd: "",
-    sessionMS: 0
+    sessionEnd: ""
   };
 
   const {values, handleChange, handleSubmit} = useForm(submit, initialState, false);
+  const [formValues, setFormValues] = useState({});
 
   const handleCancel = (event) => {
     event.preventDefault();
@@ -39,15 +40,15 @@ function AddEditLog(props) {
     history.goBack();
   }
 
-  var sessionMS, sessionStart, sessionEnd;
-  const sessionToMS = (sessionStart, sessionEnd) => {
-    const start = sessionStart.split(':');
-    const end = sessionEnd.split(':');
-    const startToMS = (+start[0]) * 60 * 60 * 1000 + (+start[1]) * 60 * 1000;
-    const endToMS = (+end[0]) * 60 * 60 * 1000 + (+end[1]) * 60 * 1000;
-    sessionMS = (endToMS-startToMS);
-  }
-
+  useEffect(() => {
+    const newValues = Object.assign(values);
+      const start = newValues.sessionStart.split(':');
+      const end = newValues.sessionEnd.split(':');
+      const startToMS = (+start[0]) * 60 * 60 * 1000 + (+start[1]) * 60 * 1000;
+      const endToMS = (+end[0]) * 60 * 60 * 1000 + (+end[1]) * 60 * 1000;
+      newValues.sessionMS = (endToMS-startToMS);
+    setFormValues(newValues);
+  }, [values]);  
 
   return (
     <div className="form--log">
@@ -58,7 +59,7 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="name">Game title:</label>
           <div>
-            <input type="list" name="name" id="titles" onChange={handleChange} value={values.name} />
+            <input type="list" name="name" id="titles" onChange={handleChange} value={formValues.name} />
             <datalist id="titles">
               {props.gameTitles.map((title) => <option key={title} value={title}>{title}</option>)}
             </datalist>
@@ -67,7 +68,7 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="format">Game platform:</label>
           <div>
-            <select name="format" onChange={handleChange} value={values.format}>
+            <select name="format" onChange={handleChange} value={formValues.format}>
               {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
@@ -75,7 +76,7 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="console">Console:</label>
           <div>
-            <select name="console" onChange={handleChange} value={values.console}>
+            <select name="console" onChange={handleChange} value={formValues.console}>
               {props.consoleNames.map( (console) => <option key={console} value={console}>{console}</option>)}
             </select>
           </div>
@@ -83,19 +84,18 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="date">Date:</label>
           <div>
-            <input type="date" name="date" onChange={handleChange} value={values.date} />
+            <input type="date" name="date" onChange={handleChange} value={formValues.date} />
           </div>
         </div>
         <div className="form--log__row">
             <label htmlFor="session">Session:</label>
           <div className="form--log__row">
             <div>
-              <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={values.sessionStart} />
+              <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={formValues.sessionStart} />
             </div>
             <div >
-              <input type="time" name="sessionEnd" id="sessionEnd" onChange={handleChange} value={values.sessionEnd} />
+              <input type="time" name="sessionEnd" id="sessionEnd" onChange={handleChange} value={formValues.sessionEnd} />
             </div>
-            <input type="hidden" onChange={handleChange} id="sessionMS" name="sessionMS" value={values.sessionMS} />
           </div>
         </div>
         
