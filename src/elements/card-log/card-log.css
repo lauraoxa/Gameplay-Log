@@ -27,15 +27,6 @@
   word-wrap: normal;
 }
 
-/* font-weight 200*/
-.card-log__format {
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-weight: 200;
-  font-size: 1.25rem;
-  bottom: 0.5rem;
-  text-align: left;
-}
-
 /* ----- STATS ----- */
 
 .card-log--statistics {

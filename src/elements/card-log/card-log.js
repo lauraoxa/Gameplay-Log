@@ -30,7 +30,6 @@ function CardLog(props) {
     <div className="card-log">
       <div className="card-log--left">
         <div className="card-log__title">{props.logData.name}</div>
-        <div className="card-log__format">{props.logData.format}</div>
       </div>
       <div className="card-log--statistics">
         <div className="card-log--row">

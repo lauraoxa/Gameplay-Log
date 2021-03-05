@@ -18,9 +18,8 @@ function AddEditLog(props) {
   }
 
   const initialState = props.logData ? props.logData : {
-    name: "",
-    format: props.consoleShortnames ? props.consoleShortnames[0] : "",
-    console: props.consoleNames ? props.consoleNames[0] : "",
+    name: props.gameTitles ? props.gameTitles[0] : "",
+    console: props.consoleShortnames ? props.consoleShortnames[0] : "",
     date: new Date().toISOString().substring(0,10),
     sessionStart: "",
     sessionEnd: ""
@@ -59,17 +58,8 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="name">Game title:</label>
           <div>
-            <input type="list" name="name" id="titles" onChange={handleChange} value={formValues.name} />
-            <datalist id="titles">
+            <select name="name" onChange={handleChange} value={formValues.name}>
               {props.gameTitles.map((title) => <option key={title} value={title}>{title}</option>)}
-            </datalist>
-          </div>
-        </div>
-        <div className="form--log__row">
-          <label htmlFor="format">Game platform:</label>
-          <div>
-            <select name="format" onChange={handleChange} value={formValues.format}>
-              {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
         </div>
@@ -77,7 +67,7 @@ function AddEditLog(props) {
           <label htmlFor="console">Console:</label>
           <div>
             <select name="console" onChange={handleChange} value={formValues.console}>
-              {props.consoleNames.map( (console) => <option key={console} value={console}>{console}</option>)}
+            {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
         </div>
