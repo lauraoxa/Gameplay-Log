@@ -7,15 +7,14 @@ function CardGame(props) {
   const logs = props.logData;
   const games = props.gameData;
 
-  var sessionMin, sessionHour, sessionFull, msCount;
+  var sessionMin, sessionHour, sessionFull;
 
-  const groupedMS = () => {
-    for (let i=0; logs.length > i; i++) {
-      if (games.name === logs.name) {
-      msCount += logs[i]["sessionMS"];
-      } return msCount;
-    }
-  }
+    let total = 0;
+    logs.forEach(logitem => {
+      if (logitem.name === games.name) {
+        total += logitem.sessionMS
+      }
+    })
 
   const msToHoursMins = (ms) => {
     sessionHour = Math.floor(ms/1000/60/60);
@@ -25,11 +24,7 @@ function CardGame(props) {
     return sessionFull = (sessionHour + ":" + sessionMin);
   }
   
-  const totalPlayedTime = msToHoursMins(groupedMS);
-
-  //const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  //if (games.name === logs.name) {logs()
-
+  const totalPlayedTime = msToHoursMins(total);
 
 
   return (

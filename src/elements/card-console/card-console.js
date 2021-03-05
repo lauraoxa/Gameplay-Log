@@ -4,6 +4,28 @@ import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardConsole(props) {
 
+  const logs = props.logData;
+  const consoles = props.consoleData;
+
+  var sessionMin, sessionHour, sessionFull;
+
+    let total = 0;
+    logs.forEach(logitem => {
+      if (logitem.console === consoles.shortname) {
+        total += logitem.sessionMS
+      }
+    })
+
+  const msToHoursMins = (ms) => {
+    sessionHour = Math.floor(ms/1000/60/60);
+    if (ms%3600000 > 0) {
+      sessionMin = Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);}
+      else {sessionMin = "00";}
+    return sessionFull = (sessionHour + ":" + sessionMin);
+  }
+  
+  const totalPlayedTime = msToHoursMins(total);
+  
   return (
     <div className="card-console">
       <div className="card-console--left">
@@ -16,7 +38,7 @@ function CardConsole(props) {
         </div>
         <div className="card-console--row">
           <div className="card-console__icon"><img src={icontime} alt="" /></div>
-          <div className="card-console__playtime">played time total</div>
+          <div className="card-console__playtime">{totalPlayedTime}</div>
         </div>
       </div>
       <div className="card-log--edit">
