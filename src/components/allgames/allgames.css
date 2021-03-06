@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500&600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;600&display=swap');
 
 
 .filter {
@@ -19,7 +19,7 @@
   color: #f2f2f2;
   font-weight:500;
   font-size: 1.2rem;
-  text-shadow: 2px 2px 1px #000000;
+  text-shadow: 2px 2px 1px #5e3333;
 }
 
 .filtered_games {

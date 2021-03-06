@@ -1,13 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;400;600;800&display=swap');
 
 .stats {
-  color: #f2f2f2;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 3rem;
-  align-items: center;
-  text-align: center;
+
 }
 
-.stats p {
+/* DISABLED FUNCTIONS --------
+
+.stats--row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 8rem;;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.stats__header {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #F2F2F2;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+.stats__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
+  color: #F2F2F2;
+  text-align: left;
+}
+
+.stats__type [type="radio"] {
+  position: relative;
+  margin-right: 2rem;
+}
+
+*/
+
+/* ----- STATIC STATS ----- */
+.stats__static--box {
+  background: rgba(36, 32, 32, 0.5);
+  border-radius: 10px;
+  width: 30rem;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+}
+
+.stats__static__title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.stats__static--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  align-items: center;
+  color: #f2f2f2;
+}
+
+.stats__static__text {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.stats__static__numbers {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(184, 241, 150, 0.6);
+  letter-spacing: 0.1em;
+  background: #242020;
+  border-radius: 2px 0px 0px 2px;
+  border-right: 3px solid rgba(184, 241, 150, 0.6);
+  padding-right: 1rem;
+  padding-left: 10rem;
+  margin-right: -1.5rem;
 }

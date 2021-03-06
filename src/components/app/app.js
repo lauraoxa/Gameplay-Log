@@ -131,7 +131,7 @@ function App() {
             <EditGame onGameSubmit={handleGameSubmit} gameData={games} consoleShortnames={consoleShortnames} />
           </Route>
           <Route path="/stats">
-            <Stats />
+            <Stats logData={logs} gameData={games} consoleData={consoles} gameTitles={gameTitles} consoleShortnames={consoleShortnames} />
           </Route>
           <Route path="/login">
             <Login />
