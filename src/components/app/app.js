@@ -2,7 +2,7 @@ import './app.css';
 import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 //----- Firebase -----
-import {useFirestore, useFirestoreCollectionData} from 'reactfire';
+import {useFirestore, useFirestoreCollectionData, useUser} from 'reactfire';
 import 'firebase/firestore';
 import 'firebase/auth';
 //----- MAIN ELEMENTS -----
@@ -36,13 +36,15 @@ function App() {
   const [logs, setLogs] = useState([]); 
   const [logsFull, setLogsFull] = useState([]);
 
-  const consoleCollectionRef = useFirestore().collection('console');
+  const user = useUser();
+
+  const consoleCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('console');
   const {data: consoleCollection} = useFirestoreCollectionData(consoleCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
 
-  const gameCollectionRef = useFirestore().collection('game');
+  const gameCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('game');
   const {data: gameCollection} = useFirestoreCollectionData(gameCollectionRef.orderBy("name"), {initialData: [], idField: "id"});
 
-  const logCollectionRef = useFirestore().collection('log');
+  const logCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('log');
   const {data: logCollection} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc"), {initialData: [], idField: "id"});
   const {data: logCollection20} = useFirestoreCollectionData(logCollectionRef.orderBy("date", "desc").limit(20), {initialData: [], idField: "id"});
   
