@@ -79,7 +79,7 @@ function AddEditLog(props) {
         </div>
         <div className="form--log__row">
             <label htmlFor="session">Session:</label>
-          <div className="form--log__row">
+          <div className="form--log__row--session">
             <div>
               <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={formValues.sessionStart} required />
             </div>

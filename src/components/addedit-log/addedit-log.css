@@ -25,7 +25,7 @@
   filter: invert(0.9);
 }
 
-.form--log__row {
+.form--log__row, .form--log__row--session {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,9 +64,18 @@
   text-transform: uppercase;
   text-align: center;
   min-width: 20vw;
-  max-width: 9.5rem;
+  max-width: 12rem;
   margin-left: 1rem;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .form--log__row--session {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 /*----- buttons -----*/
 .form--log__buttons {
