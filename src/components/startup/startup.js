@@ -24,7 +24,7 @@ function Startup (props) {
           <p>Please use your <b>Google-account</b><br/>to sign in and to use this app.</p>
         </div>
         <Button onClick={signIn} primary>Log in</Button>
-        </div>
+      </div>
     </div>
   );
 }

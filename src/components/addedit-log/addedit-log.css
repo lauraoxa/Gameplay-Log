@@ -43,18 +43,6 @@
   text-align: left;
 }
 
-/*----- title input text -----*/
-.form--log [type="list"] {
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: none;
-  color: #242020;
-  text-align: left;
-  width: 60vw;
-  max-width: 20rem;
-}
-
 /*----- selection texts -----*/
 .form--log select, .form--log [type="date"] {
   font-family: 'Saira Extra Condensed', sans-serif;
@@ -63,7 +51,12 @@
   color: #242020;
   text-transform: uppercase;
   text-align: left;
-  width: 60vw;
+  min-width: 60vw;
+  max-width: 20rem;
+}
+
+#titleSelect select {
+  min-width: 80vw;
   max-width: 20rem;
 }
 
@@ -75,7 +68,7 @@
   color: #242020;
   text-transform: uppercase;
   text-align: center;
-  width: 40vw;
+  min-width: 25vw;
   max-width: 9.5rem;
   margin-left: 1rem;
 }

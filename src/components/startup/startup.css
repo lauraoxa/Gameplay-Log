@@ -3,14 +3,14 @@
 .startup {
   align-items: center;
   text-align: center;
-  margin: 0;
   background-color: #242020;
   color: #f2f2f2;
-  height: 100vh;
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   text-shadow: 1px 1px 0px #000000;
+  height: 100vh;
+  width: 100vw;
 }
 
 .startup_box {
@@ -19,7 +19,7 @@
   box-shadow: 5px 5px 5px #000 rgba(187, 187, 187, 0.7);
   position: relative;
   top: 4rem;
-  margin: 0 4rem;
+  margin: auto 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 .startup__title {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 400;
-  font-size: 4.75rem;
+  font-size: 3rem;
   text-shadow: 1px 1px 0px #000000;
   padding: 1rem;
 }

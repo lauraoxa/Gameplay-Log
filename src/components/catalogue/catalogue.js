@@ -25,7 +25,7 @@ function Catalogue() {
           </Link>
         </div>
         <div className="catalogue--allgames">
-        <div className="catalogue__left">  
+          <div className="catalogue__left">  
             <div className="catalogue__icon">
               <img src={iconarticle} alt="" />
             </div>

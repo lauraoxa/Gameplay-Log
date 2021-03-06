@@ -33,36 +33,32 @@ function AddEditGame(props) {
 
     <div className="form--game">
       <form onSubmit={handleSubmit}>
+        
         <div className="form--game__icon">
           <img src={iconclose} onClick={handleCancel} alt="cancel" />
-        </div>
-        <div className="form--game__row">
+        </div> 
+        <div className="form--game__form">
           <div>
             <label htmlFor="name">Game title:</label>
           </div>
           <div>
             <input type="text" name="name" onChange={handleChange} value={values.name} />
           </div>
-        </div>
-
-        <div className="form--game__row">
           <div>
             <label htmlFor="format">Game platform:</label>
           </div>
           <div>
               <select name="format" onChange={handleChange} value={values.format}>
-              {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
-            </select>
+                {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
+              </select>
+          </div>
+          <div className="form--game__row">
+            <div className="form--game__storage" value={values.storage}>
+              <input type="radio" name="storage" id="disc" value="disc/cart" checked={values.storage === "disc/cart"} onChange={handleChange} /> disc/cart
+              <input type="radio" name="storage" id="digital" value="digital" checked={values.storage === "digital"} onChange={handleChange} /> digital
+            </div>
           </div>
         </div>
-
-        <div className="form--game__row">
-          <div className="form--game__storage" value={values.storage}>
-            <input type="radio" name="storage" id="disc" value="disc/cart" checked={values.storage === "disc/cart"} onChange={handleChange} /> disc/cart
-            <input type="radio" name="storage" id="digital" value="digital" checked={values.storage === "digital"} onChange={handleChange} /> digital
-          </div>
-        </div>
-
         <div className="form--game__buttons">
           <div><Button primary type="submit">{"save"}</Button></div>
         </div>

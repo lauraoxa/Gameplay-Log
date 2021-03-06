@@ -9,7 +9,7 @@
   margin: 1rem 0.3rem;
   padding: 1rem;
   box-shadow: 1px 2px 2px #000000;
-  height:max-content;
+  height: max-content;
 }
 
 /*----- close icon -----*/
@@ -23,6 +23,12 @@
 
 .form--game__icon :hover {
   filter: invert(0.9);
+}
+
+/*----- the form -----*/
+.form--game__form {
+  line-height: 2;
+  float: left;
 }
 
 .form--game__row {
@@ -41,6 +47,7 @@
   color: #F2F2F2;
   text-shadow: 1px 1px 0px #000000;
   text-align: left;
+  float: left;
 }
 
 /*----- form input -----*/
@@ -51,7 +58,7 @@
   color: #242020;
   text-transform: none;
   text-align: left;
-  width: 60vw;
+  min-width: 60vw;
   max-width: 20rem;
   margin-bottom: 1rem;
 }
@@ -64,8 +71,9 @@
   color: #242020;
   text-transform: uppercase;
   text-align: left;
-  width: 60vw;
+  min-width: 60vw;
   max-width: 20rem;
+  margin-bottom: 1rem;
 }
 
 /*----- storage selection -----*/
@@ -73,10 +81,10 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
-  right: 1rem;
+  left: 0rem;
   margin-bottom: 0.5rem;
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 600;
@@ -87,12 +95,10 @@
 .form--game [type="radio"] {
   position: relative;
   margin-right: 0.75rem;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
 
 /*----- buttons -----*/
 .form--game__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: block;
 }

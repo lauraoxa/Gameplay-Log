@@ -34,22 +34,16 @@ function AddEditConsole(props) {
         <div className="form--console__icon">
           <img src={iconclose} onClick={handleCancel} alt="cancel" />
         </div>
-        <div className="form--console__row">
+        <div className="form--console__form">
           <div>
             <label htmlFor="name">Console:</label>
           </div>
-        </div>
-        <div className="form--console__row">
           <div>
             <input type="text" name="name" onChange={handleChange} value={values.name} />
           </div>
-        </div>
-        <div className="form--console__row">
           <div>
             <label htmlFor="shortname">Shortname:</label>
           </div>
-        </div>
-        <div className="form--console__row">
           <div>
             <input type="text" name="shortname" onChange={handleChange} value={values.shortname} />
           </div>

@@ -3,7 +3,6 @@
 .form--console {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border-radius: 10px;
   background-color:	rgba(184, 241, 150, 0.6);
   margin: 1rem 0.3rem;
@@ -18,17 +17,15 @@
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
-  padding-bottom: 0.75rem; 
+  padding-bottom: 0.75rem;
 }
 
 .form--console__icon :hover {
   filter: invert(0.9);
 }
 
-.form--console__row {
-  display: flex;
-  flex-direction: row;
-  padding-left: 3rem;
+/*----- form lines -----*/
+.form--console__form {
   line-height: 2;
 }
 
@@ -38,8 +35,9 @@
   font-weight: 200;
   font-size: 2rem;
   color: #f2f2f2;
-  text-shadow: 1px 1px 0px #000000;
+  text-shadow: 1px 1px 0px #000;
   text-align: left;
+  float: left;
 }
 
 /*----- input text -----*/
@@ -50,14 +48,14 @@
   text-transform: none;
   color: #242020;
   text-align: left;
-  width: 80vw;
+  min-width: 80vw;
   max-width: 20rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  float: left;
 }
 
 /*----- bottom buttons -----*/
 .form--console__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: block;
+  margin: 0 auto; 
 }

@@ -9,16 +9,10 @@
   margin-top: 2.5rem;
 }
 
-.catalogue__left {
-  display: flex;
-  justify-content: safe;
-  align-items: center;
-}
-
 .catalogue--allconsoles, .catalogue--allgames {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(36, 32, 32, 0.8);
   border-radius: 10px;
@@ -27,22 +21,32 @@
   line-height: 0.7;
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: #F2F2F2;
   text-shadow: 1px 1px 0px #000000;
 }
 
 .catalogue--allconsoles p, .catalogue--allgames p {
-padding-left: 1rem;
+  padding-left: 0.5rem;
+  padding-right: auto;
+  text-align: left;
+  position: relative;
+  left: -4.5rem;
 }
 
 a:link, a:visited {
-color: #f2f2f2;
-text-decoration: none;
+  color: #f2f2f2;
+  text-decoration: none;
 }
 
 a:hover {
   text-shadow: 3px 3px 2px rgba(242, 242, 242, 0.5);
+}
+
+.catalogue__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .catalogue__icon {
@@ -53,7 +57,7 @@ a:hover {
   width: 4rem;
   height: auto;
   position: relative;
-  left: 2rem;
+  left: 1rem;
   margin-right: 2rem;
 }
 
@@ -73,7 +77,7 @@ a:hover {
 }
 
 .button-addnew:hover {
-opacity: 0.8;
+  opacity: 0.8;
 }
 
 .catalogue__icon__addnew img {
