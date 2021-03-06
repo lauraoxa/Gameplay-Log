@@ -9,7 +9,7 @@ import 'firebase/auth';
 import Header from '../../components/header';
 import Content from '../../components/content';
 import Menu from '../../components/menu';
-import Login from '../../components/login';
+import User from '../../components/user';
 //----- GAME LOG -----
 import Gamelog from '../../components/gamelog';
 import AllLogs from '../../components/alllogs';
@@ -134,8 +134,8 @@ function App() {
           <Route path="/stats">
             <Stats logData={logs} gameData={games} consoleData={consoles} gameTitles={gameTitles} consoleShortnames={consoleShortnames} />
           </Route>
-          <Route path="/login">
-            <Login />
+          <Route path="/user">
+            <User />
           </Route>
         </Content>
         <Menu />

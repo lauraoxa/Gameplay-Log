@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+
+.user__title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0px #000;
+  margin: 2rem auto;
+}
+
+.user--card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color:	rgba(184, 241, 150, 0.6);
+  margin: 1rem 2rem;;
+  padding: 1.5rem;
+  color: #000000;
+  box-shadow: 1px 2px 2px #000000;
+}
+
+.user--card__left {
+  display: block;
+  margin: auto 0; 
+}
+
+.user--card__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.user__icon img {
+  border-radius: 5px;
+}
+
+.user__name {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.user__email {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.user button {
+  margin: 3rem auto;
+}

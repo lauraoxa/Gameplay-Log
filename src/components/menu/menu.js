@@ -11,7 +11,7 @@ function Menu() {
       <div className="icons"><Link to="/"><SportsEsportsRoundedIcon fontSize="large" /></Link></div>
       <div className="icons"><Link to="/catalogue"><FolderSpecialRoundedIcon fontSize="large" /></Link></div>
       <div className="icons"><Link to="/stats"><ShowChartRoundedIcon fontSize="large" /></Link></div>
-      <div className="icons"><Link to="/login"><AccountBoxIcon fontSize="large" /></Link></div>
+      <div className="icons"><Link to="/user"><AccountBoxIcon fontSize="large" /></Link></div>
     </div>
   );
 }

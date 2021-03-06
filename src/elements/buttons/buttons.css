@@ -68,7 +68,7 @@
     }
 
     /* GO! */
-  .button--square, {
+  .button--square {
     background: rgba(242, 242, 242, 0.8);
     box-shadow: 2px 2px 1px #000000;
     border-radius: 5px;
