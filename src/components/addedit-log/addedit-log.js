@@ -56,10 +56,8 @@ function AddEditLog(props) {
           <img src={iconclose} onClick={handleCancel} alt="cancel" />
         </div>
         <div className="form--log__row">
-          <label htmlFor="name">Game title:</label>
-        </div>
-        <div className="form--log__row">
-          <div id="titleSelect">
+          <label htmlFor="name">Game:</label>
+          <div>
             <select name="name" onChange={handleChange} value={formValues.name}>
               {props.gameTitles.map((title) => <option key={title} value={title}>{title}</option>)}
             </select>
@@ -76,17 +74,17 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="date">Date:</label>
           <div>
-            <input type="date" name="date" onChange={handleChange} value={formValues.date} />
+            <input type="date" name="date" onChange={handleChange} value={formValues.date} required />
           </div>
         </div>
         <div className="form--log__row">
             <label htmlFor="session">Session:</label>
           <div className="form--log__row">
             <div>
-              <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={formValues.sessionStart} />
+              <input type="time" name="sessionStart" id="sessionStart" onChange={handleChange} value={formValues.sessionStart} required />
             </div>
             <div >
-              <input type="time" name="sessionEnd" id="sessionEnd" onChange={handleChange} value={formValues.sessionEnd} />
+              <input type="time" name="sessionEnd" id="sessionEnd" onChange={handleChange} value={formValues.sessionEnd} required />
             </div>
           </div>
         </div>

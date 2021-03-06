@@ -42,7 +42,7 @@ function AddEditGame(props) {
             <label htmlFor="name">Game title:</label>
           </div>
           <div>
-            <input type="text" name="name" onChange={handleChange} value={values.name} />
+            <input type="text" name="name" onChange={handleChange} value={values.name} required />
           </div>
           <div>
             <label htmlFor="format">Game platform:</label>
@@ -54,8 +54,8 @@ function AddEditGame(props) {
           </div>
           <div className="form--game__row">
             <div className="form--game__storage" value={values.storage}>
-              <input type="radio" name="storage" id="disc" value="disc/cart" checked={values.storage === "disc/cart"} onChange={handleChange} /> disc/cart
-              <input type="radio" name="storage" id="digital" value="digital" checked={values.storage === "digital"} onChange={handleChange} /> digital
+              <input type="radio" name="storage" id="disc" value="disc/cart" checked={values.storage === "disc/cart"} onChange={handleChange} required /> disc/cart
+              <input type="radio" name="storage" id="digital" value="digital" checked={values.storage === "digital"} onChange={handleChange} required /> digital
             </div>
           </div>
         </div>

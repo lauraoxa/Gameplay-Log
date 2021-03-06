@@ -39,13 +39,13 @@ function AddEditConsole(props) {
             <label htmlFor="name">Console:</label>
           </div>
           <div>
-            <input type="text" name="name" onChange={handleChange} value={values.name} />
+            <input type="text" name="name" onChange={handleChange} value={values.name} required />
           </div>
           <div>
             <label htmlFor="shortname">Shortname:</label>
           </div>
           <div>
-            <input type="text" name="shortname" onChange={handleChange} value={values.shortname} />
+            <input type="text" name="shortname" onChange={handleChange} value={values.shortname} required />
           </div>
         </div>
         <div className="form--console__buttons">

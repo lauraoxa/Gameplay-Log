@@ -55,11 +55,6 @@
   max-width: 20rem;
 }
 
-#titleSelect select {
-  min-width: 80vw;
-  max-width: 20rem;
-}
-
 /*----- session selection -----*/
 .form--log [type="time"] {
   font-family: 'Saira Extra Condensed', sans-serif;
@@ -68,7 +63,7 @@
   color: #242020;
   text-transform: uppercase;
   text-align: center;
-  min-width: 25vw;
+  min-width: 20vw;
   max-width: 9.5rem;
   margin-left: 1rem;
 }
@@ -78,4 +73,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.form--log button {
+  margin: 1rem;
 }
