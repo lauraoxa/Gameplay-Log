@@ -38,13 +38,13 @@ function AddEditGame(props) {
           <img src={iconclose} onClick={handleCancel} alt="cancel" />
         </div> 
         <div className="form--game__form">
-          <div>
+          <div className="form--game__label">
             <label htmlFor="name">Game title:</label>
           </div>
           <div>
             <input type="text" name="name" onChange={handleChange} value={values.name} required />
           </div>
-          <div>
+          <div className="form--game__label">
             <label htmlFor="format">Game platform:</label>
           </div>
           <div>

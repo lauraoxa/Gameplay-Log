@@ -51,8 +51,8 @@
   color: #242020;
   text-transform: uppercase;
   text-align: left;
-  min-width: 60vw;
-  max-width: 20rem;
+  width: 19rem;
+  max-width: 80vw;
 }
 
 /*----- session selection -----*/
@@ -63,8 +63,8 @@
   color: #242020;
   text-transform: uppercase;
   text-align: center;
-  min-width: 20vw;
-  max-width: 12rem;
+  width: 12rem;
+  max-width: 20vw;
   margin-left: 1rem;
 }
 
@@ -73,9 +73,24 @@
   .form--log__row--session {
     display: flex;
     flex-direction: column;
+    line-height: 2.5;
   }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 445px) {
+  .form--log__row {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+  }
+
+  .form--log__row--session {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
 
 /*----- buttons -----*/
 .form--log__buttons {

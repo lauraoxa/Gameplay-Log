@@ -38,6 +38,10 @@
   font-weight: 600;
 }
 
+.startup img {
+  vertical-align: middle;
+}
+
 .startup button {
   background: rgba(184, 241, 150, 0.1);
   box-shadow: 2px 2px 1px #B8F196;
