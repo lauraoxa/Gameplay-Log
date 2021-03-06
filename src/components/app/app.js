@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 //----- Firebase -----
 import {useFirestore, useFirestoreCollectionData} from 'reactfire';
 import 'firebase/firestore';
+import 'firebase/auth';
 //----- MAIN ELEMENTS -----
 import Header from '../../components/header';
 import Content from '../../components/content';

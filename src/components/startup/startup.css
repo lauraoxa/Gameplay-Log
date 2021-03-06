@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+
+.startup {
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  background-color: #242020;
+  color: #f2f2f2;
+  height: 100vh;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.startup_box {
+  background: rgba(184, 241, 150, 0.2);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #000 rgba(187, 187, 187, 0.7);
+  position: relative;
+  top: 4rem;
+  margin: 0 4rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.startup__title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 4.75rem;
+  text-shadow: 1px 1px 0px #000000;
+  padding: 1rem;
+}
+
+.startup b {
+  font-weight: 600;
+}
+
+.startup button {
+  background: rgba(184, 241, 150, 0.1);
+  box-shadow: 2px 2px 1px #B8F196;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 1px #000000;
+  margin: 2rem auto;
+  width: 7rem;
+  height: 3rem;
+}
+
+.startup button:visited, .startup button:hover, .startup button:active {
+  background: rgba(184, 241, 150, 0.5);
+}
