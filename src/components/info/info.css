@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+
+.info { 
+}
+
+.info hr {
+  border: 1px solid rgba(184, 241, 150, 0.6);
+  width: 70%;
+}
+
+/*----- whtat's new section -----*/
+
+.info__whatsnew__title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.info__whatsnew--list {
+  text-align: left;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #f2f2f2;
+  background-color: rgba(36, 32, 32, 0.7);
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.info__whatsnew--entry {
+  padding: 0.5rem;
+}
+
+.info__whatsnew--entry li {
+  list-style-type: square;
+  padding: 0.1rem;
+}
+
+.info__whatsnew--entry b {
+  font-weight: 600;
+}
+
+.info__whatsnew--entry__date {
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+
+/*----- information section -----*/
+
+.info__title svg {
+  fill: rgba(184, 241, 150, 0.6);
+  width: 3rem;
+  height: auto;
+  margin: 1rem auto;
+ }
+ 
+ .info__title div {
+   font-family: 'Saira Extra Condensed', sans-serif;
+   font-size: 2.5rem;
+   font-weight: 200;
+   color: #f2f2f2;
+   text-shadow: 1px 1px 0px #000;
+   line-height: 0.5;
+   padding-bottom: 1rem;
+ }
+ 
+ /*----- information text section -----*/
+ 
+ .info__text {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  text-align: left;
+  vertical-align: middle;
+  color: #f2f2f2;
+  background-color: rgba(36, 32, 32, 0.7);
+  border-radius: 10px;
+}
+
+.info__text li {
+  list-style-image: url('../../images/icon_info-white-18dp.svg');
+  list-style-position: inside;
+  color: #f2f2f2;
+  background-color: rgba(184, 241, 150, 0.3);
+  border-radius: 5px;
+  margin: 1rem;
+  margin-left: -1.5rem;
+  padding: 0.5rem;  
+}
+
+.info__text--list__title {
+  display: inline-block;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: rgba(184, 241, 150, 0.6);
+  margin-left: 0.75rem;
+}
+
+.info--icon {
+  margin: 0 1rem;
+  align-items: center;
+  vertical-align: middle;
+  float: right;
+}
+
+.info__text--list__text {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #f2f2f2;
+  padding-left: 2.25rem;
+}
+
+.info__text--list__text b {
+  font-weight: 600;
+}

@@ -8,20 +8,12 @@
   align-items: center;
 }
 
-.menu a:link {
+.menu a:link, .menu a:visited {
   color: #FFF;
 }
 
-.menu a:visited {
-  color: #FFF;
-}
-
-.menu a:hover {
+.menu a:hover, .menu a:active {
   color: 	rgba(184, 241, 150, 0.6);
-}
-
-.menu a:active {
-  color: #FFF;
 }
 
 .icons {

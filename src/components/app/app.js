@@ -10,6 +10,7 @@ import Header from '../../components/header';
 import Content from '../../components/content';
 import Menu from '../../components/menu';
 import User from '../../components/user';
+import Info from '../../components/info';
 //----- GAME LOG -----
 import Gamelog from '../../components/gamelog';
 import AllLogs from '../../components/alllogs';
@@ -139,6 +140,9 @@ function App() {
           <Route path="/user">
             <User />
           </Route>
+          <Route path="/info">
+          <Info />
+        </Route>
         </Content>
         <Menu />
       </Router>
