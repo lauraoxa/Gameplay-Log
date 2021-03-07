@@ -96,9 +96,9 @@ function Info (props) {
               <div className="info--icon">
                 <AccountBoxIcon fontSize="large" />
               </div>
-              Log out of the account you're using with this app.<br />
-              <b>Note!</b> If you have trouble logging back in, 
-              try refreshing your browser view.
+              Log out of the account you're using with this 
+              app. <b>Note!</b> If you have trouble logging 
+              back in, try refreshing your browser view.
             </div>
           </li>
         </ul>
