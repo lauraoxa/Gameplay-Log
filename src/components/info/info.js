@@ -53,7 +53,7 @@ function Info (props) {
         <ul>
           <li>
             <div className="info__text--list__title">
-              Log
+              Gamelog
             </div>
             <div className="info__text--list__text">
               <div className="info--icon">
