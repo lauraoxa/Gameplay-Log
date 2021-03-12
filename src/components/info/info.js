@@ -13,12 +13,23 @@ function Info (props) {
     <div className="info">
       <div className="info__whatsnew">
         <div className="infto__whatnew__title">
-          <div class="info__whatsnew__title">
+          <div className="info__whatsnew__title">
             <div>What's new?</div>
           </div>
         </div>
         <div className="info__whatsnew--list">
           <ul>
+            <div className="info__whatsnew--entry">
+              <div className="info__whatsnew--entry__date">
+                2021-03-12:
+              </div>
+              <li>
+                A new tip added for log time recording down below. <b>&darr;</b>
+              </li>
+              <li>
+                A prompt to check out the info section added to login screen.
+              </li>
+            </div>
             <div className="info__whatsnew--entry">
               <div className="info__whatsnew--entry__date">
                 2021-03-07:
@@ -62,6 +73,10 @@ function Info (props) {
               Add you game log entries here! 
               First, remember to add at least 
               one console and game in <b>Catalogue</b>!
+              <br />
+              &bull; <b> Tip:</b> At a start of a game session, 
+              set both start and finish time as your current time - 
+              then simply edit the latter when you finish playing!
             </div>
           </li>
           <li>
