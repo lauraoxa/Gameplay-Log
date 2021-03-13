@@ -2,11 +2,11 @@
 
 .user__title {
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 200;
   color: #f2f2f2;
   text-shadow: 1px 1px 0px #000;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 
 .user--card {
@@ -50,4 +50,17 @@
 
 .user button {
   margin: 2rem auto 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .user--card,
+  .user--card__left,
+  .user--card__right {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

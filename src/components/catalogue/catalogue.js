@@ -9,7 +9,9 @@ function Catalogue() {
         <div className="catalogue--allconsoles">
           <div className="catalogue__left">  
             <div className="catalogue__icon">
+            <Link to="/catalogue/allconsoles">
               <img src={iconarticle} alt="" />
+            </Link>
             </div>
             <div>
             <Link to="/catalogue/allconsoles"><p>All consoles</p></Link>
@@ -27,7 +29,9 @@ function Catalogue() {
         <div className="catalogue--allgames">
           <div className="catalogue__left">  
             <div className="catalogue__icon">
+            <Link to="catalogue/allgames">
               <img src={iconarticle} alt="" />
+            </Link>
             </div>
             <div>
             <p><Link to="catalogue/allgames">All games</Link></p>

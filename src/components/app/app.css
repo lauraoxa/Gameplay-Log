@@ -1,9 +1,9 @@
 .app {
   max-width: 38rem;
+  min-width: 255px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   text-align: center;
   margin: 0 auto;
   background-color: #242020;

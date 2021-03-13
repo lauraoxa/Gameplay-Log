@@ -6,8 +6,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  max-height: 6em;
-  min-height: 6em;
+  max-height: 6rem;
+  min-height: 6rem;
   background-color: #242020;
 }
 
@@ -25,4 +25,19 @@
   font-family: 'Big Shoulders Stencil Display', cursive;
   font-size: 3.5rem;
   color: #FFF;
+  text-align: right;
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    max-height: 4.5rem;
+    min-height: 4.5rem;
+    padding: 0.5em 1.5rem;
+  }
+  .title--letsPlay {
+    font-size: 1.5rem;
+  }
+  .title--myGameLog {
+    font-size: 2rem;
+  }
 }

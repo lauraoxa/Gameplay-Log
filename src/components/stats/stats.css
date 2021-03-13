@@ -4,51 +4,13 @@
 
 }
 
-/* DISABLED FUNCTIONS --------
-
-.stats--row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 8rem;;
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-.stats__header {
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-weight: 200;
-  font-size: 2rem;
-  color: #F2F2F2;
-  text-align: center;
-  margin: 0.5rem auto;
-}
-
-.stats__type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 2rem;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #F2F2F2;
-  text-align: left;
-}
-
-.stats__type [type="radio"] {
-  position: relative;
-  margin-right: 2rem;
-}
-
-*/
-
 /* ----- STATIC STATS ----- */
 .stats__static--box {
   background: rgba(36, 32, 32, 0.5);
   border-radius: 10px;
   margin: 1rem 0.5rem;
   padding: 1.5rem;
+  min-width: 155px;
 }
 
 .stats__static__title {
@@ -89,4 +51,17 @@
   padding-right: 1rem;
   padding-left: 5rem;
   margin-right: -1.5rem;
+}
+
+@media only screen and (max-width: 310px) {
+  .stats__static__title {
+    font-size: 1.75rem;
+  }
+  .stats__static__text {
+    font-size: 1.25rem;
+  }
+  .stats__static__numbers {
+    font-size: 1.25rem;
+    padding-left: 3rem;
+  }
 }

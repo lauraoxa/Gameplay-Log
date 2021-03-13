@@ -8,6 +8,7 @@
   margin: 1rem 0.3rem;
   color: #000000;
   box-shadow: 1px 2px 2px #000000;
+  min-width: 275px;
 }
 
 .card-console--left {
@@ -38,7 +39,6 @@
   flex-grow: 1;
   position: relative;
   right: 0.5rem;
-  line-height: 1;
   margin: 0.3rem;
 }
 
@@ -47,6 +47,7 @@
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
+  line-height: 1.2;
 }
 
 .card-console__icon {
@@ -58,6 +59,7 @@
   height: auto;
   padding: 0.3rem;
   padding-right: 1.5rem;
+  padding-left: 1rem;
   vertical-align: middle;
 }
 
@@ -65,10 +67,10 @@
 .card-console__shortname {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   text-align: left;
   padding-right: 1.5rem;
-
+  padding-left: 1rem;
 }
 
 /* font-weight 300*/
@@ -115,4 +117,18 @@
   color: rgba(242, 242, 242, 0.8);
   text-transform: uppercase;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9);
+}
+
+@media only screen and (max-width: 385px) {
+  .card-console__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .card-console__shortname,
+  .card-console__console,
+  .card-console__playtime {
+    font-size: 0.9rem;
+  }
 }
