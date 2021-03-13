@@ -48,7 +48,7 @@ function AddEditGame(props) {
             <label htmlFor="format">Game platform:</label>
           </div>
           <div>
-              <select name="format" onChange={handleChange} value={values.format}>
+              <select name="format" onChange={handleChange} value={values.format} required>
                 {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
               </select>
           </div>

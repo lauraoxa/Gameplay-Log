@@ -58,7 +58,7 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="name">Game:</label>
           <div>
-            <select name="name" onChange={handleChange} value={formValues.name}>
+            <select name="name" onChange={handleChange} value={formValues.name} required>
               {props.gameTitles.map((title) => <option key={title} value={title}>{title}</option>)}
             </select>
           </div>
@@ -66,7 +66,7 @@ function AddEditLog(props) {
         <div className="form--log__row">
           <label htmlFor="console">Console:</label>
           <div>
-            <select name="console" onChange={handleChange} value={formValues.console}>
+            <select name="console" onChange={handleChange} value={formValues.console} required>
             {props.consoleShortnames.map( (shortname) => <option key={shortname} value={shortname}>{shortname}</option>)}
             </select>
           </div>
