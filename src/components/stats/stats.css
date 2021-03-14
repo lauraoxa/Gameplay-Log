@@ -5,6 +5,7 @@
 }
 
 /* ----- STATIC STATS ----- */
+
 .stats__static--box {
   background: rgba(36, 32, 32, 0.5);
   border-radius: 10px;
@@ -52,6 +53,8 @@
   padding-left: 5rem;
   margin-right: -1.5rem;
 }
+
+/* ----- SMALL SCREEN TWEAKS ----- */
 
 @media only screen and (max-width: 310px) {
   .stats__static__title {

@@ -68,6 +68,8 @@
   margin-left: 1rem;
 }
 
+/* ----- SMALL SCREEN TWEAKS ----- */
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .form--log__row--session {
@@ -84,12 +86,10 @@
     flex-direction: column;
     line-height: 1.8;
   }
-
   .form--log__row--session {
     display: flex;
     flex-direction: row;
   }
-
 }
 
 /*----- buttons -----*/

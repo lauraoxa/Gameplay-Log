@@ -5,10 +5,11 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {useFirestore, useFirestoreCollectionData, useUser} from 'reactfire';
 import 'firebase/firestore';
 import 'firebase/auth';
-//----- MAIN ELEMENTS -----
+//----- MAIN ELEMENTS / MENU -----
 import Header from '../../components/header';
-import Content from '../../components/content';
+import Content from '../../components/content'; // SCROLL
 import Menu from '../../components/menu';
+import Stats from '../../components/stats';
 import User from '../../components/user';
 import Info from '../../components/info';
 //----- GAME LOG -----
@@ -16,8 +17,6 @@ import Gamelog from '../../components/gamelog';
 import AllLogs from '../../components/alllogs';
 import AddLog from '../../components/add-log';
 import EditLog from '../../components/edit-log';
-//----- STATS -----
-import Stats from '../../components/stats';
 //----- CATALOGUE -----
 import Catalogue from '../../components/catalogue';
 import AllConsoles from '../../components/allconsoles';

@@ -9,7 +9,10 @@ function EditConsole(props) {
 
   return (
       <div>
-        <AddEditConsole onConsoleSubmit={props.onConsoleSubmit} consoleData={console}/>
+        <AddEditConsole
+          onConsoleSubmit={props.onConsoleSubmit}
+          consoleData={console}
+        />
       </div>
   );
 }

@@ -1,5 +1,4 @@
 import './stats.css';
-// import useForm from '../useform';
 
 function Stats(props) {
 
@@ -26,7 +25,9 @@ function Stats(props) {
       }
     })
 
-    var currentyear = new Date().getFullYear(); var prevyear = currentyear-1;
+    var currentyear = new Date().getFullYear();
+    var prevyear = currentyear-1;
+    
     logs.forEach(logitem => {
       if (logitem.date.substring(0,4) == prevyear) {
         totalLastYear += logitem.sessionMS

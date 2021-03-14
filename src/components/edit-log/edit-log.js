@@ -9,7 +9,15 @@ function EditLog(props) {
 
   return (
       <div>
-        <AddEditLog onLogSubmit={props.onLogSubmit} onLogDelete={props.onLogDelete} logData={log} consoleShortnames={props.consoleShortnames} consoleNames={props.consoleNames} gameData={props.gameData} gameTitles={props.gameTitles} />
+        <AddEditLog
+          onLogSubmit={props.onLogSubmit}
+          onLogDelete={props.onLogDelete}
+          logData={log}
+          consoleShortnames={props.consoleShortnames}
+          consoleNames={props.consoleNames}
+          gameData={props.gameData}
+          gameTitles={props.gameTitles}
+        />
       </div>
   );
 }

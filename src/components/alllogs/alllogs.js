@@ -1,4 +1,3 @@
-import './alllogs.css';
 import CardLog from '../../elements/card-log';
 
 function AllLogs(props) {

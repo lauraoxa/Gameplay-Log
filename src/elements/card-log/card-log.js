@@ -4,6 +4,8 @@ import icongame from '../../images/icon_videogame-white-48dp.svg';
 import icondate from '../../images/icon_event-white-48dp.svg';
 import icontime from '../../images/icon_time-white-48dp.svg';
 
+/* generates a single LOG card */
+
 function CardLog(props) {
 
   //working code - counts "12:00" to "13:00" into millisecond, then displays HH:MM

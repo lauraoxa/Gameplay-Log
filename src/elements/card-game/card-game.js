@@ -2,6 +2,8 @@ import './card-game.css';
 import {Link} from 'react-router-dom';
 import icontime from '../../images/icon_time-white-48dp.svg';
 
+/* generates a single GAME card */
+
 function CardGame(props) {
 
   const logs = props.logData;

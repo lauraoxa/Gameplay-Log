@@ -5,6 +5,8 @@ display: flex;
 flex-direction: column;
 }
 
+/* ----- TOP MENU ----- */
+
 .gamelog--menu {
   display: flex;
   flex-direction: row;
@@ -33,11 +35,15 @@ vertical-align: middle;
 opacity: 0.5;
 }
 
+/* ----- LOGS ----- */
+
 .gamelog--entries {
   overflow: hidden;
   overflow-y: scroll;
   max-height: 63vh;
 }
+
+/* ----- "NO LOGS" texts ----- */
 
 .gamelog__nologs {
   margin: 3rem auto;

@@ -8,7 +8,15 @@ import iconlist from '../../images/icon_article-white-48dp.svg';
 function Gamelog(props) {
   
   const logs = props.logData.map( (log) => <CardLog key={log.id} logData={log} />);
-  const noLogsAlert = (props.logData.length > 0) ? logs : <div className="gamelog__nologs">No logs yet!<div className="gamelog__nologs__small">(Remember to add at least one console and game before making a log entry!)</div></div>;
+
+  // TEXT IF 0 LOGS
+  const noLogsAlert = (props.logData.length > 0) ?
+    logs :
+    <div className="gamelog__nologs">No logs yet!
+      <div className="gamelog__nologs__small">
+        (Remember to add at least one console and game before making a log entry!)
+      </div>
+    </div>;
 
 
   return (

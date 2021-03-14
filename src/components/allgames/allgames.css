@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;600&display=swap');
 
+/* ----- FILTERING by CONSOLE ----- */
 
 .filter {
   display: flex;
@@ -27,6 +28,8 @@
   overflow-y: scroll;
   max-height: 63vh;
 }
+
+/* ----- text if no games ----- */
 
 .filtered__nogames {
   margin: 3rem auto;
