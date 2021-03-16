@@ -12,6 +12,6 @@
   color: #FFF;
 }
 
-.menu a:hover, .menu a:active {
-  color: 	rgba(184, 241, 150, 0.6);
+.menu a:hover, menu a:active {
+  color:	rgba(116, 150, 96, 0.6);
 }
