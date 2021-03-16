@@ -28,6 +28,15 @@ function Info (props) {
           <ul>
             <div className="info__whatsnew--entry">
               <div className="info__whatsnew--entry__date">
+                2021-03-16:
+              </div>
+              <li>
+                A couple of new tips added for log time recording
+                 and <b>Catalogue</b> naming conventions. <b>&darr;</b>
+              </li>
+            </div>
+            <div className="info__whatsnew--entry">
+              <div className="info__whatsnew--entry__date">
                 2021-03-12:
               </div>
               <li>
@@ -48,17 +57,6 @@ function Info (props) {
                 "No logs to show" feature added.
               </li>
             </div>
-            <div className="info__whatsnew--entry">
-              <div className="info__whatsnew--entry__date">
-              2021-03-06:
-            </div>
-            <li>
-              Published!
-            </li>
-            <li>
-              Tiny css tweaks all over the place.
-            </li>
-          </div>
           </ul>
         </div>
       </div>
@@ -100,6 +98,10 @@ function Info (props) {
               </div>
               Add your <b>console</b> and <b>game</b> collections here. 
               Browse games for each <b>console</b>.
+              <br />
+              &bull; <b> Notice:</b> Lists delivered to <b>Gamelog</b> 
+              entry forms are automatically alphabetized and case-sensitive. 
+              Upper case is listed before lower case (A - a).
             </div>
           </li>
           <li>
