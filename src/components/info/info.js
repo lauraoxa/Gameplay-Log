@@ -84,6 +84,10 @@ function Info (props) {
               &bull; <b> Tip:</b> At a start of a game session, 
               set both start and finish time as your current time - 
               then simply edit the latter when you finish playing!
+              <br />
+              &bull; <b> Notice:</b> If your gaming session extends 
+              past midnight (example: 23:00-01:00), log the time with 
+              two separate entries (23:00-23:59 and 00:00-01:00).
             </div>
           </li>
           <li>
