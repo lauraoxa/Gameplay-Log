@@ -35,11 +35,14 @@ function Stats(props) {
     })
 
     const msToHoursMins = (ms) => {
+      let sessionFull;
       sessionHour = Math.floor(ms/1000/60/60);
-      if (ms%3600000 > 0) {
+      if (ms%3600000 > 32400000) {
         sessionMin = Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
-      } else {sessionMin = "00";}
-      return sessionFull = (sessionHour + ":" + sessionMin);
+      } else {
+        sessionMin = "0" + Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
+      }
+       return sessionFull = (sessionHour + ":" + sessionMin);
     }
 
     const today = msToHoursMins(totalToday);

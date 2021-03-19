@@ -8,7 +8,7 @@ import icontime from '../../images/icon_time-white-48dp.svg';
 
 function CardLog(props) {
 
-  //working code - counts "12:00" to "13:00" into millisecond, then displays HH:MM
+  //working code - counts "12:00" to "13:00" into milliseconds, then displays HH:MM
   let sessionMin, sessionHour, sessionFull;
 
   if (props.logData.sessionStart && props.logData.sessionEnd) {
@@ -21,9 +21,11 @@ function CardLog(props) {
     const sessionMS = (endToMS-startToMS);
 
     sessionHour = Math.floor(sessionMS/1000/60/60);
-    if (sessionMS%3600000 > 0) {
-      sessionMin = Math.floor((sessionMS - (sessionHour*1000*60*60) )/1000/60)}
-      else {sessionMin = "00"}
+    if (sessionMS%3600000 > 32400000) {
+      sessionMin = Math.floor((sessionMS - (sessionHour*1000*60*60) )/1000/60);
+    } else {
+      sessionMin = "0" + Math.floor((sessionMS - (sessionHour*1000*60*60) )/1000/60);
+    }
 
     sessionFull = (sessionHour + ":" + sessionMin);  
   }

@@ -26,6 +26,14 @@ function Info (props) {
         </div>
         <div className="info__whatsnew--list">
           <ul>
+          <div className="info__whatsnew--entry">
+            <div className="info__whatsnew--entry__date">
+              2021-03-19:
+            </div>
+            <li>
+              Numbers stylized in total playtimes & log entries.
+            </li>
+          </div>
             <div className="info__whatsnew--entry">
               <div className="info__whatsnew--entry__date">
                 2021-03-16:
