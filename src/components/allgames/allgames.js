@@ -14,15 +14,15 @@ function AllGames(props) {
   // FILTERING GAMES BY CONSOLE
 
   const filteredGames = values.filter ? props.gameData.filter((game) => game.format === values.filter) : props.gameData;
-
-  const games = (filteredGames.length > 0) ?
-     filteredGames.map( (game) =>
-      <CardGame key={game.id}
-        gameData={game}
-        consoleData={props.consoleData}
-        logData={props.logData} />) : 
-      <div className="filtered__nogames">No games for this console.</div>
-    ;
+  
+ const games = (filteredGames.length > 0) ?
+    filteredGames.map( (game) =>
+    <CardGame key={game.id}
+      gameData={game}
+      consoleData={props.consoleData}
+      logData={props.logData} />) : 
+    <div className="filtered__nogames">No games for this console.</div>
+  ;
 
   //const games = filteredGames.map( (game) => <CardGame key={game.id} gameData={game} />);
 

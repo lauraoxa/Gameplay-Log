@@ -7,13 +7,13 @@ import { FirebaseAppProvider, AuthCheck } from 'reactfire';
 import Startup from './components/startup';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDvDQTc3HngEe_Zf2HiMapJBcPZLMjkGns",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "gameplay-log.firebaseapp.com",
   projectId: "gameplay-log",
   storageBucket: "gameplay-log.appspot.com",
-  messagingSenderId: "934546283683",
-  appId: "1:934546283683:web:5f225438e8874bde7a3316",
-  measurementId: "G-56FHVHT12Q"
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 ReactDOM.render(
