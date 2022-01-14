@@ -28,6 +28,14 @@ function Info (props) {
           <ul>
           <div className="info__whatsnew--entry">
             <div className="info__whatsnew--entry__date">
+              2022-01-14:
+            </div>
+            <li>
+              Gameplay time's minute styling fixed (hopefully once and for all!).
+            </li>
+          </div>
+          <div className="info__whatsnew--entry">
+            <div className="info__whatsnew--entry__date">
               2021-03-19:
             </div>
             <li>
@@ -39,8 +47,7 @@ function Info (props) {
                 2021-03-16:
               </div>
               <li>
-                A couple of new tips added for log time recording
-                 and <b>Catalogue</b> naming conventions. <b>&darr;</b>
+                A couple of new tips added for log time recording and <b>Catalogue</b> naming conventions. <b>&darr;</b>
               </li>
             </div>
             <div className="info__whatsnew--entry">

@@ -21,7 +21,7 @@ function CardLog(props) {
     const sessionMS = (endToMS-startToMS);
 
     sessionHour = Math.floor(sessionMS/1000/60/60);
-    if (sessionMS%3600000 > 32400000) {
+    if (sessionMS%3600000 < 540000) {
       sessionMin = "0" + Math.floor((sessionMS - (sessionHour*1000*60*60) )/1000/60);
     } else {
       sessionMin = Math.floor((sessionMS - (sessionHour*1000*60*60) )/1000/60);

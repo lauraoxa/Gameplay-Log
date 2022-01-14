@@ -18,16 +18,16 @@ function CardGame(props) {
       }
     })
 
-  const msToHoursMins = (ms) => {
-    let sessionFull;
-    sessionHour = Math.floor(ms/1000/60/60);
-    if (ms%3600000 > 32400000) {
-      sessionMin = "0" + Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
-    } else {
-      sessionMin = Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
+    const msToHoursMins = (ms) => {
+      let sessionFull;
+      sessionHour = Math.floor(ms/1000/60/60);
+      if (ms%3600000 < 540000) {
+        sessionMin = "0" + Math.floor((ms - (sessionHour*1000*60*60))/1000/60);
+      } else {
+        sessionMin = Math.floor((ms - (sessionHour*1000*60*60))/1000/60);
+      }
+        return sessionFull = (sessionHour + ":" + sessionMin);
     }
-     return sessionFull = (sessionHour + ":" + sessionMin);
-  }
   
   const totalPlayedTime = msToHoursMins(total);
 

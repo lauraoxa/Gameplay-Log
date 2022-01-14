@@ -7,48 +7,49 @@ function Stats(props) {
   var sessionMin, sessionHour, sessionFull;
 
   let totalToday = 0, totalThisMonth = 0, totalThisYear = 0, totalLastYear = 0;
-    logs.forEach(logitem => {
-      if (logitem.date === new Date().toISOString().substring(0,10)) {
-        totalToday += logitem.sessionMS
-      }
-    })
 
-    logs.forEach(logitem => {
-      if (logitem.date.substring(0,7) === new Date().toISOString().substring(0,7)) {
-        totalThisMonth += logitem.sessionMS
-      }
-    })
-    
-    logs.forEach(logitem => {
-      if (logitem.date.substring(0,4) === new Date().toISOString().substring(0,4)) {
-        totalThisYear += logitem.sessionMS
-      }
-    })
-
-    var currentyear = new Date().getFullYear();
-    var prevyear = currentyear-1;
-    
-    logs.forEach(logitem => {
-      if (logitem.date.substring(0,4) == prevyear) {
-        totalLastYear += logitem.sessionMS
-      }
-    })
-
-    const msToHoursMins = (ms) => {
-      let sessionFull;
-      sessionHour = Math.floor(ms/1000/60/60);
-      if (ms%3600000 > 32400000) {
-        sessionMin = "0" + Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
-      } else {
-        sessionMin = Math.floor((ms - (sessionHour*1000*60*60) )/1000/60);
-      }
-       return sessionFull = (sessionHour + ":" + sessionMin);
+  logs.forEach(logitem => {
+    if (logitem.date === new Date().toISOString().substring(0,10)) {
+      totalToday += logitem.sessionMS
     }
+  })
 
-    const today = msToHoursMins(totalToday);
-    const thisMonth = msToHoursMins(totalThisMonth);
-    const thisYear = msToHoursMins(totalThisYear);
-    const lastYear = msToHoursMins(totalLastYear);
+  logs.forEach(logitem => {
+    if (logitem.date.substring(0,7) === new Date().toISOString().substring(0,7)) {
+      totalThisMonth += logitem.sessionMS
+    }
+  })
+  
+  logs.forEach(logitem => {
+    if (logitem.date.substring(0,4) === new Date().toISOString().substring(0,4)) {
+      totalThisYear += logitem.sessionMS
+    }
+  })
+
+  var currentyear = new Date().getFullYear();
+  var prevyear = currentyear-1;
+  
+  logs.forEach(logitem => {
+    if (logitem.date.substring(0,4) == prevyear) {
+      totalLastYear += logitem.sessionMS
+    }
+  })
+
+  const msToHoursMins = (ms) => {
+    let sessionFull;
+    sessionHour = Math.floor(ms/1000/60/60);
+    if (ms%3600000 < 540000) {
+      sessionMin = "0" + Math.floor((ms - (sessionHour*1000*60*60))/1000/60);
+    } else {
+      sessionMin = Math.floor((ms - (sessionHour*1000*60*60))/1000/60);
+    }
+      return sessionFull = (sessionHour + ":" + sessionMin);
+  }
+
+  const today = msToHoursMins(totalToday);
+  const thisMonth = msToHoursMins(totalThisMonth);
+  const thisYear = msToHoursMins(totalThisYear);
+  const lastYear = msToHoursMins(totalLastYear);
 
 
   return (
